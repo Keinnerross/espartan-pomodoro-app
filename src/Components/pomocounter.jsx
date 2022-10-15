@@ -1,0 +1,55 @@
+import { context } from "../Components/context/store";
+import React, { useState, useContext, useEffect } from "react";
+import NavPomodoro from "./navPomodoro";
+
+const PomoCounter = () => {
+  const { time, setTime } = useContext(context);
+  const { pomoSession } = useContext(context);
+
+  const [isActive, setIsActive] = useState(false);
+  const showTime = `${parseInt(time / 60)}: ${parseInt(time % 60)}`;
+  const [timeId, setTimeId] = useState(0);
+  const [pomoCounter, setPomoCounter]= useState();
+
+  useEffect(() => {
+    let runningPomo = null;
+
+    if (isActive) {
+      runningPomo = setInterval(() => {
+        setTime((time) => time - 1);
+      }, 1000);
+      setTimeId(runningPomo);
+    } else {
+      clearInterval(timeId);
+      console.log(`soy yo ${timeId}`);
+      console.log(`soy yo el interval${runningPomo}`);
+
+      console.log("pausee");
+    }
+    console.log("effect");
+  }, [isActive]);
+
+
+  /* CYCLE SYSTEM VALIDATION */
+  /*TO DINAMIC TITLE */
+  (() => {
+    document.title = `${showTime}`;
+  })();
+  /****************** */
+  return (
+    <div>
+      <div className="pomoNav">
+        <NavPomodoro></NavPomodoro>
+      </div>
+      <div className="pomo-container">{showTime}</div>
+      <div className="button-play" onClick={() => setIsActive(!isActive)}>
+        PLAY
+      </div>
+      <br></br>
+      <div className="pomo-session">{pomoSession}</div>
+      <br></br>
+    </div>
+  );
+};
+
+export default PomoCounter;
