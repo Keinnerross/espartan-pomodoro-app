@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
 import { Provider } from "./Components/context/store";
-import PomoCounter from "./Components/pomocounter";
-import SettingPomodoro from "./Components/settingPomodoro";
+import PomoCounter from "./Components/pomodoro/pomocounter";
+import SettingPomodoro from "./Components/pomodoro/settingPomodoro";
+
 
 import "./App.css";
 

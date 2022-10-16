@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
-import { context } from "../Components/context/store";
+import { context } from "../context/store";
 
 const CycleCounter = () => {
   const { time, setTime } = useContext(context);

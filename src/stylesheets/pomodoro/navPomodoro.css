@@ -1,0 +1,11 @@
+.nav-pomodoro-container ul {
+  display: flex;
+  list-style: none;
+  gap:10px;
+  padding: 0;
+}
+
+.nav-pomodoro-container ul li {
+  cursor: pointer;
+}
+
