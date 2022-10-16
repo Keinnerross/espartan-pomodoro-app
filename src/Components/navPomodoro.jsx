@@ -7,23 +7,30 @@ const NavPomodoro = () => {
   const { shortBreak } = useContext(context);
   const { longBreak } = useContext(context);
   const { pomoSession, setPomoSession } = useContext(context);
+  const { isActive, setIsActive } = useContext(context);
+
+
+
+
+
+
 
   useEffect(() => {
     if (pomoSession == "Pomodoro") {
       setTime(pomoSetting * 60);
-    } else if (pomoSession == "Short Break") {
+    } else if (pomoSession == "Short") {
       setTime(shortBreak * 60);
-    } else if (pomoSession == "Long Break") {
+    } else if (pomoSession == "Long") {
       setTime(longBreak * 60);
     }
-  }, [pomoSession, pomoSetting, shortBreak, longBreak]);
+  }, [pomoSession,]);
 
   return (
     <div className="nav-pomodoro-container">
       <ul>
         <li onClick={() => setPomoSession("Pomodoro")}>Pomo</li>
-        <li onClick={() => setPomoSession("Short Break")}>xd</li>
-        <li onClick={() => setPomoSession("Long Break")}>Long</li>
+        <li onClick={() => setPomoSession("Short")}>xd</li>
+        <li onClick={() => setPomoSession("Long")}>Long</li>
       </ul>
     </div>
   );

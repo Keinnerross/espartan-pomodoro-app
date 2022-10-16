@@ -1,15 +1,17 @@
 import { context } from "../Components/context/store";
 import React, { useState, useContext, useEffect } from "react";
 import NavPomodoro from "./navPomodoro";
-
+import CycleCounter from "./cycleCounter";
 const PomoCounter = () => {
   const { time, setTime } = useContext(context);
   const { pomoSession } = useContext(context);
+  const {isActive, setIsActive} = useContext(context);
 
-  const [isActive, setIsActive] = useState(false);
   const showTime = `${parseInt(time / 60)}: ${parseInt(time % 60)}`;
   const [timeId, setTimeId] = useState(0);
-  const [pomoCounter, setPomoCounter]= useState();
+  const [cycleCounter, setCycleCounter]= useState();
+
+
 
   useEffect(() => {
     let runningPomo = null;
@@ -31,6 +33,7 @@ const PomoCounter = () => {
 
 
   /* CYCLE SYSTEM VALIDATION */
+  
   /*TO DINAMIC TITLE */
   (() => {
     document.title = `${showTime}`;
@@ -48,6 +51,7 @@ const PomoCounter = () => {
       <br></br>
       <div className="pomo-session">{pomoSession}</div>
       <br></br>
+      <CycleCounter></CycleCounter>
     </div>
   );
 };

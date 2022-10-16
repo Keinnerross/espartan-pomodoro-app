@@ -8,6 +8,8 @@ export const Provider = ({ children }) => {
   const [shortBreak, setShotBreak] = useState(5);
   const [longBreak, setLongBreak] = useState(15);
   const [pomoSession, setPomoSession] = useState("Pomodoro");
+  const [isActive, setIsActive] = useState(false);
+
   return (
     <context.Provider
       value={{
@@ -21,6 +23,8 @@ export const Provider = ({ children }) => {
         setLongBreak,
         pomoSession,
         setPomoSession,
+        isActive,
+        setIsActive
       }}
     >
       {children}
