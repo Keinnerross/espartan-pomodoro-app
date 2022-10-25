@@ -6,7 +6,7 @@ const SettingPomodoro = () => {
   const { pomoSetting, setPomoSetting } = useContext(context);
   const { shortBreak, setShotBreak } = useContext(context);
   const { longBreak, setLongBreak } = useContext(context);
-  const [toggleSetting, setToggleSetting] = useState(true);
+  const {toggleSetting, setToggleSetting} = useContext(context);
   const [inputValue, setInputValue] = useState({
     pomodoro: pomoSetting,
     short: shortBreak,
@@ -20,6 +20,7 @@ const SettingPomodoro = () => {
     setLongBreak(inputValue.long);
     console.log("updadeado");
     console.log(inputValue.long);
+    setToggleSetting(!toggleSetting);
   }
 
   const settingShow = () => {
@@ -67,8 +68,8 @@ const SettingPomodoro = () => {
               }}
             />
           </div>
+          <button type="submit">DONE</button>
         </form>
-        <button type="submit">DONE</button>
       </div>
     </div>
   );

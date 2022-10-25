@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import { context } from "../context/store";
-import "../../stylesheets/pomodoro/navPomodoro.css"
+import "../../stylesheets/pomodoro/navPomodoro.css";
 
 const NavPomodoro = () => {
   const { time, setTime } = useContext(context);
@@ -8,13 +8,8 @@ const NavPomodoro = () => {
   const { shortBreak } = useContext(context);
   const { longBreak } = useContext(context);
   const { pomoSession, setPomoSession } = useContext(context);
+  const {toggleSetting, setToggleSetting} = useContext(context);
   const { isActive, setIsActive } = useContext(context);
-
-
-
-
-
-
 
   useEffect(() => {
     if (pomoSession == "Pomodoro") {
@@ -24,7 +19,7 @@ const NavPomodoro = () => {
     } else if (pomoSession == "Long") {
       setTime(longBreak * 60);
     }
-  }, [pomoSession,]);
+  }, [pomoSession, pomoSetting, shortBreak, longBreak]);
 
   return (
     <div className="nav-pomodoro-container">
@@ -33,6 +28,7 @@ const NavPomodoro = () => {
         <li onClick={() => setPomoSession("Short")}>Short</li>
         <li onClick={() => setPomoSession("Long")}>Long</li>
       </ul>
+      <div className="setting-pomo-button" onClick={()=> setToggleSetting(true)}>Q</div>
     </div>
   );
 };

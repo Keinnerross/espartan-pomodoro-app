@@ -11,11 +11,41 @@
 .pomo-container {
   font-size: 72px;
 }
+.play {
+  box-shadow: -6px 0px 0px 0px #9d131aa1;
+}
 
-.button-play {
+.button-pomo {
   width: 40px;
   height: 40px;
-  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--red);
   border-radius: 100%;
   cursor: pointer;
+}
+
+.pomoNav {
+  width: 100%;
+}
+
+.buttons-pomo-container {
+  display: flex;
+  gap: 10px;
+}
+
+.cycle-view{
+  display: flex;
+}
+
+.pomo-bar-container{
+  width: 100%;
+  height: 10px;  
+  margin-top: 10px;
+}
+
+.pomo-bar-progress{
+  height: 10px;
+  background-color: var(--red);
 }

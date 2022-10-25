@@ -1,11 +1,29 @@
+
+.nav-pomodoro-container{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .nav-pomodoro-container ul {
   display: flex;
+  flex-direction:row;
   list-style: none;
+  grid-column-start: 2;
   gap:10px;
   padding: 0;
 }
 
 .nav-pomodoro-container ul li {
   cursor: pointer;
+}
+
+.setting-pomo-button{
+grid-column-start: 3;
+display: flex;
+align-items: center;
+justify-content: flex-end;
+margin-right: 20px;
+cursor: pointer;
 }
 

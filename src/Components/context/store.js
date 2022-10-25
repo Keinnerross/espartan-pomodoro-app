@@ -9,6 +9,7 @@ export const Provider = ({ children }) => {
   const [longBreak, setLongBreak] = useState(15);
   const [pomoSession, setPomoSession] = useState("Pomodoro");
   const [isActive, setIsActive] = useState(false);
+  const [toggleSetting, setToggleSetting] = useState(false);
 
   return (
     <context.Provider
@@ -24,7 +25,9 @@ export const Provider = ({ children }) => {
         pomoSession,
         setPomoSession,
         isActive,
-        setIsActive
+        setIsActive,
+        toggleSetting,
+        setToggleSetting,
       }}
     >
       {children}
