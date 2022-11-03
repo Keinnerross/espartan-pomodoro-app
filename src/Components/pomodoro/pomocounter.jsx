@@ -1,11 +1,10 @@
-import { BsFillPlayFill, BsStopFill } from "react-icons/bs";
-import { GrPowerReset } from "react-icons/gr";
 import { context } from "../context/store";
 import React, { useState, useContext, useEffect } from "react";
 import NavPomodoro from "./navPomodoro";
 import CycleCounter from "./cycleCounter";
-import "../../stylesheets/pomodoro/pomoCounter.css";
 import ProgressBar from "./progressbar";
+import ButtonsPomo from "./buttonsPomo";
+import "../../stylesheets/pomodoro/pomoCounter.css";
 
 const PomoCounter = () => {
   const { time, setTime } = useContext(context);
@@ -48,24 +47,9 @@ const PomoCounter = () => {
         <NavPomodoro></NavPomodoro>
       </div>
       <div className="pomo-container">{showTime(time)}</div>
-      <div className="buttons-pomo-container">
-        <div className="button-pomo aux">
-          <GrPowerReset />
-        </div>
-        <div
-          className={isActive ? "button-pomo play active" : "button-pomo play"}
-          onClick={() => setIsActive(!isActive)}
-        >
-          {" "}
-          <BsFillPlayFill />
-        </div>
-        <div className="button-pomo aux">
-          <BsStopFill />
-        </div>
-      </div>
+      <ButtonsPomo />
       <span className="cycle-view">
         <CycleCounter />
-        /4
       </span>
       <span>Focus Warrior</span>
       <div className="pomo-bar-container">

@@ -8,8 +8,8 @@ const CycleCounter = () => {
   const { longBreak } = useContext(context);
   const { isActive, setIsActive } = useContext(context);
   const { pomoSession, setPomoSession } = useContext(context);
+  const { cyclePomo, setCyclePomo } = useContext(context);
 
-  const [cyclePomo, setCyclePomo] = useState(0);
 
   useEffect(() => {
     if (time == 0 && pomoSession == "Pomodoro" && cyclePomo < 3) {
