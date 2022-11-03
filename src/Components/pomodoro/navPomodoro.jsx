@@ -3,13 +3,12 @@ import { context } from "../context/store";
 import "../../stylesheets/pomodoro/navPomodoro.css";
 
 const NavPomodoro = () => {
-  const { time, setTime } = useContext(context);
+  const { setTime } = useContext(context);
   const { pomoSetting } = useContext(context);
   const { shortBreak } = useContext(context);
   const { longBreak } = useContext(context);
   const { pomoSession, setPomoSession } = useContext(context);
   const {toggleSetting, setToggleSetting} = useContext(context);
-  const { isActive, setIsActive } = useContext(context);
 
   useEffect(() => {
     if (pomoSession == "Pomodoro") {

@@ -5,11 +5,11 @@ import React, { useState, useContext, useEffect } from "react";
 import NavPomodoro from "./navPomodoro";
 import CycleCounter from "./cycleCounter";
 import "../../stylesheets/pomodoro/pomoCounter.css";
+import ProgressBar from "./progressbar";
 
 const PomoCounter = () => {
   const { time, setTime } = useContext(context);
   const { isActive, setIsActive } = useContext(context);
-  const { pomoSetting } = useContext(context);
 
   const showTime = (time) => {
     const min = parseInt(time / 60);
@@ -18,10 +18,6 @@ const PomoCounter = () => {
   };
 
   const [timeId, setTimeId] = useState(0);
-
-  /*State Bar-Progress Pomodoro */
-  const barProgress  = ((time / 60) //*ojo */ 
-  / pomoSetting) * 100;
 
   useEffect(() => {
     let runningPomo = null;
@@ -41,8 +37,6 @@ const PomoCounter = () => {
     console.log("effect");
   }, [isActive]);
 
-  /* CYCLE SYSTEM VALIDATION */
-
   /*TO DINAMIC TITLE */
   (() => {
     document.title = `${showTime(time)}`;
@@ -55,17 +49,17 @@ const PomoCounter = () => {
       </div>
       <div className="pomo-container">{showTime(time)}</div>
       <div className="buttons-pomo-container">
-        <div className="button-pomo rest">
+        <div className="button-pomo aux">
           <GrPowerReset />
         </div>
         <div
-          className="button-pomo play"
+          className={isActive ? "button-pomo play active" : "button-pomo play"}
           onClick={() => setIsActive(!isActive)}
         >
           {" "}
           <BsFillPlayFill />
         </div>
-        <div className="button-pomo stop">
+        <div className="button-pomo aux">
           <BsStopFill />
         </div>
       </div>
@@ -74,9 +68,8 @@ const PomoCounter = () => {
         /4
       </span>
       <span>Focus Warrior</span>
-      {barProgress}
       <div className="pomo-bar-container">
-        <div className="pomo-bar-progress" style={{ width: `${barProgress}%` }}></div>
+        <ProgressBar />
       </div>
     </div>
   );
