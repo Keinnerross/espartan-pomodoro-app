@@ -1,6 +1,6 @@
 import "../../stylesheets/tasks/addtask.css";
 import React, { useState, useRef, useEffect } from "react";
-const AddTask = () => {
+const AddTask = ({ onSubmit }) => {
   const [addTaskForm, setAddTaskForm] = useState(false);
   const [taskValue, setTaskValue] = useState("");
   const inputAddTask = useRef(null);
@@ -19,6 +19,17 @@ const AddTask = () => {
     }
   }, [addTaskForm]);
 
+  function sendTask(e) {
+    e.preventDefault();
+
+    const newTask = {
+      title: taskValue,
+    };
+    onSubmit(newTask);
+    e.target.reset();
+
+  }
+
   return (
     <div
       className={
@@ -30,13 +41,18 @@ const AddTask = () => {
       <div
         className={addTaskForm ? "add-task-button disable" : "add-task-button"}
       ></div>
-      <form className={addTaskForm ? "add-task-form" : "add-task-form disable"}>
+      <form
+        className={addTaskForm ? "add-task-form" : "add-task-form disable"}
+        onSubmit={sendTask}
+      >
         <input
           type="text"
           className="input-add-task"
           ref={inputAddTask}
-          onChange={(e) => {setTaskValue(e.target.value)
-        console.log(taskValue)}}
+          onChange={(e) => {
+            setTaskValue(e.target.value);
+            console.log(taskValue);
+          }}
         />
         <div className="controls-add-task">
           <button type="submit">Add Task</button>

@@ -1,16 +1,14 @@
-import "../../stylesheets/tasks/task.css"
+import "../../stylesheets/tasks/task.css";
 
-const Task = ()=>{
-    return(
-        <div className="task-container">
-            <div className="title-task">
-                Soy una tarea
-            </div>
-            <div className="check-task-container">
-                <input type="checkbox"/>
-            </div>
-        </div>
-    )
-}
+const Task = ({ title, id }) => {
+  return (
+    <div className="task-container">
+      <div className="title-task">{title}</div>
+      <div className="check-task-container">
+        <input type="checkbox" />
+      </div>
+    </div>
+  );
+};
 
 export default Task;
