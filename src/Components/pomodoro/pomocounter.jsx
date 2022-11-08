@@ -31,7 +31,6 @@ const PomoCounter = () => {
       console.log(`soy yo ${timeId}`);
       console.log(`soy yo el interval${runningPomo}`);
 
-      console.log("pausee");
     }
     console.log("effect");
   }, [isActive]);
@@ -46,10 +45,10 @@ const PomoCounter = () => {
       <div className="pomoNav">
         <NavPomodoro></NavPomodoro>
       </div>
-      <div className="pomo-container">{showTime(time)}</div>
+      <div className="pomo-time-container">{showTime(time)}</div>
       <ButtonsPomo />
       <span className="cycle-view">
-        <CycleCounter />
+        <CycleCounter />/4
       </span>
       <span>Focus Warrior</span>
       <div className="pomo-bar-container">

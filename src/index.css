@@ -1,6 +1,7 @@
 :root{
   --red: #db212b;
   --secundary: #142d42;
+  --bodyBlue: #11263a;
 }
 body {
   margin: 0;

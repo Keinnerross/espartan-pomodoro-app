@@ -10,8 +10,8 @@ export const Provider = ({ children }) => {
   const [pomoSession, setPomoSession] = useState("Pomodoro");
   const [isActive, setIsActive] = useState(false);
   const [toggleSetting, setToggleSetting] = useState(false);
-  const [cyclePomo, setCyclePomo] = useState(2);
-
+  const [cyclePomo, setCyclePomo] = useState(0);
+  const [modalWindow, setModalWindows] = useState(false);
   return (
     <context.Provider
       value={{
@@ -29,7 +29,10 @@ export const Provider = ({ children }) => {
         setIsActive,
         toggleSetting,
         setToggleSetting,
-        cyclePomo, setCyclePomo
+        cyclePomo,
+        setCyclePomo,
+        modalWindow,
+        setModalWindows,
       }}
     >
       {children}

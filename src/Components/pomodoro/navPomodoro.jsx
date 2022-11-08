@@ -8,7 +8,7 @@ const NavPomodoro = () => {
   const { shortBreak } = useContext(context);
   const { longBreak } = useContext(context);
   const { pomoSession, setPomoSession } = useContext(context);
-  const {toggleSetting, setToggleSetting} = useContext(context);
+  const { setToggleSetting } = useContext(context);
 
   useEffect(() => {
     if (pomoSession == "Pomodoro") {
@@ -23,11 +23,16 @@ const NavPomodoro = () => {
   return (
     <div className="nav-pomodoro-container">
       <ul>
-        <li onClick={() => setPomoSession("Pomodoro")}>Pomo</li>
-        <li onClick={() => setPomoSession("Short")}>Short</li>
-        <li onClick={() => setPomoSession("Long")}>Long</li>
+        <li className={ (pomoSession == "Pomodoro") ? "activeNav" : ""} onClick={() => setPomoSession("Pomodoro")}>Pomo</li>
+        <li className={ (pomoSession == "Short") ? "activeNav" : ""} onClick={() => setPomoSession("Short")}>Short</li>
+        <li className={ (pomoSession == "Long") ? "activeNav" : ""} onClick={() => setPomoSession("Long")}>Long</li>
       </ul>
-      <div className="setting-pomo-button" onClick={()=> setToggleSetting(true)}>Q</div>
+      <div
+        className="setting-pomo-button"
+        onClick={() => setToggleSetting(true)}
+      >
+        Q
+      </div>
     </div>
   );
 };

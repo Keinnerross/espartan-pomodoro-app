@@ -33,7 +33,7 @@ const CycleCounter = () => {
       setIsActive(false);
       setPomoSession("Pomodoro");
     }
-  }, [time, isActive]);
+  }, [time]);
 
   return <div>{cyclePomo}</div>;
 };

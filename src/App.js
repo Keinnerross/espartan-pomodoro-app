@@ -1,6 +1,7 @@
-import React, { useContext } from "react";
+import MainTemplate from "./Components/mainTemplate";
+
 import { Provider } from "./Components/context/store";
-import PomoCounter from "./Components/pomodoro/pomocounter";
+
 import SettingPomodoro from "./Components/pomodoro/settingPomodoro";
 
 
@@ -10,8 +11,7 @@ function App() {
   
   return (
     <Provider>
-      <PomoCounter></PomoCounter>
-      <SettingPomodoro></SettingPomodoro>
+      <MainTemplate></MainTemplate>
     </Provider>
   );
 }

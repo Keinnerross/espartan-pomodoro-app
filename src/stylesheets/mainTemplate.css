@@ -1,0 +1,59 @@
+.all-container {
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  background: var(--bodyBlue);
+  display: flex;
+}
+
+.tasks-logo-container {
+  width: 25%;
+  padding: 2%;
+
+}
+
+.body-main-app-container {
+  width: 75%;
+  height: 100vh;
+}
+
+/** Content into body-main-app-container*/
+
+header {
+  width: 100%;
+  height: 12%;
+}
+
+.body-app {
+  width: 100%;
+  height: 88%;
+}
+
+.title-greeting {
+  width: 100%;
+  height: 10%;
+}
+
+.content-body-app-container {
+  width: 100%;
+  height: 90%;
+  display: flex;
+}
+
+.record-missions-container {
+  width: 40%;
+  height: 100%;
+}
+
+.pomo-habits-container {
+  width: 100%;
+}
+
+.pomo-container {
+  height: 50%;
+  padding: 4%;
+}
+
+.habits-container {
+  width: 100%;
+}

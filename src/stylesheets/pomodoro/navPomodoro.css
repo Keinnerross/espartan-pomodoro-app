@@ -8,14 +8,18 @@
 .nav-pomodoro-container ul {
   display: flex;
   flex-direction:row;
+  align-items: center;
+  justify-content: center;
   list-style: none;
   grid-column-start: 2;
-  gap:10px;
+  gap:30px;
   padding: 0;
 }
 
 .nav-pomodoro-container ul li {
   cursor: pointer;
+  padding: 4px 10px;
+
 }
 
 .setting-pomo-button{
@@ -25,5 +29,11 @@ align-items: center;
 justify-content: flex-end;
 margin-right: 20px;
 cursor: pointer;
+}
+
+.activeNav{
+  border-radius: 7px;
+  background-color: var(--bodyBlue);
+  overflow: visible;
 }
 

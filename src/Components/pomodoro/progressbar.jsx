@@ -28,7 +28,6 @@ const ProgressBar = () => {
         className="pomo-bar-progress"
         style={{ width: `${barProgress}%` }}
       ></div>
-      <div>{barProgress}</div>
     </>
   );
 };
