@@ -5,8 +5,8 @@ import React, { useState } from "react";
 const TaskView = () => {
   const [tasksArr, setTasksArr] = useState([]);
 
-  const addNewTask = (ax) => {
-    const taskUpdate = [ax, ...tasksArr];
+  const addNewTask = (task) => {
+    const taskUpdate = [task, ...tasksArr];
     setTasksArr(taskUpdate);
     console.log(tasksArr);
   };
@@ -17,9 +17,8 @@ const TaskView = () => {
         <h3>Tasks</h3>
       </span>
       <AddTask onSubmit={addNewTask} />
-
-      {tasksArr.map((aja) => {
-        return <Task title={aja.title} key={Math.random()} />;
+      {tasksArr.map((task) => {
+        return <Task title={task.title} key={Math.random(12)} />;
       })}
     </div>
   );
