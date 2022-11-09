@@ -24,6 +24,7 @@ const AddTask = ({ onSubmit }) => {
 
     const newTask = {
       title: taskValue,
+      id: parseInt(Math.random() * (50 - 1) + 1) .toString()
     };
     onSubmit(newTask);
     e.target.reset();

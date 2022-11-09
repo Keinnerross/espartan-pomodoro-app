@@ -11,6 +11,8 @@
 
 .pomo-time-container {
   font-size: 72px;
+  font-weight: 700;
+  font-family: poppins;
 }
 .button-pomo {
   display: flex;

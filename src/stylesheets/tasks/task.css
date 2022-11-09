@@ -1,11 +1,14 @@
-.task-container{
-    width: 60%;
-    padding: 12px;
-    color: black;
-    background-color: white;
-    border-radius: 7px;
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 15px 0;
+.task-container {
+  width: 60%;
+  padding: 12px;
+  color: black;
+  background-color: white;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.margin-container {
+  padding: 10px 0;
 }

@@ -1,3 +1,15 @@
-.tasks-view-container{
-    margin-top: 30px;
+.tasks-view-container {
+  margin: 0;
+  padding: 0;
+}
+
+.task-view-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.task-list-item {
+  list-style: none;
+  padding: 0;
 }
