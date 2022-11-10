@@ -1,5 +1,8 @@
 import "../../stylesheets/header/headerTemplate.css";
-import UserHeader from "./user/userHeader";
+import UserHeader from "./user/userHeader"
+import { BsFillMoonFill } from "react-icons/bs";
+import { IoMdSettings } from "react-icons/io";
+
 
 const HeaderTemplate = () => {
   return (
@@ -15,13 +18,13 @@ const HeaderTemplate = () => {
           </select>
         </div>
         <div className="controls-header">
-          <div className="header-button-container">O</div>
-          <div className="header-button-container">x</div>
+          <div className="header-button-container"><BsFillMoonFill/></div>
+          <div className="header-button-container"><IoMdSettings/></div>
         </div>
       </div>
       <div className="margin-user">
         <div className="user-header-section">
-          <UserHeader />
+          <UserHeader/>
         </div>
       </div>
     </div>
