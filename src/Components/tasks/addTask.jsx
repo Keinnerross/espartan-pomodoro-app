@@ -24,11 +24,10 @@ const AddTask = ({ onSubmit }) => {
 
     const newTask = {
       title: taskValue,
-      id: parseInt(Math.random() * (50 - 1) + 1) .toString()
+      id: parseInt(Math.random() * (50 - 1) + 1).toString(),
     };
     onSubmit(newTask);
     e.target.reset();
-
   }
 
   return (
@@ -50,9 +49,9 @@ const AddTask = ({ onSubmit }) => {
           type="text"
           className="input-add-task"
           ref={inputAddTask}
+          placeholder="Agg a title for you task"
           onChange={(e) => {
             setTaskValue(e.target.value);
-            console.log(taskValue);
           }}
         />
         <div className="controls-add-task">

@@ -1,5 +1,5 @@
 .task-container {
-  width: 60%;
+  width: 80%;
   padding: 12px;
   color: black;
   background-color: white;
@@ -9,6 +9,11 @@
   justify-content: space-between;
 }
 
-.margin-container {
-  padding: 10px 0;
+.task-container:hover{
+  background-color: rgb(244, 243, 243);
+
 }
+.margin-container {
+  padding: 7px 0;
+}
+

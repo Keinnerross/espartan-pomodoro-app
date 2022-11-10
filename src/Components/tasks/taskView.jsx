@@ -21,6 +21,8 @@ const TaskView = () => {
     return result;
   };
 
+  let arrastre = true;
+
   return (
     <div className="tasks-view-container">
       <span>
@@ -63,13 +65,13 @@ const TaskView = () => {
                       {...provided.draggableProps}
                       ref={provided.innerRef}
                       {...provided.dragHandleProps}
+                      
                     >
                       <Task title={task.title} />
                     </li>
                   )}
                 </Draggable>
               ))}
-              {provided.placeholder}
             </ul>
           )}
         </Droppable>

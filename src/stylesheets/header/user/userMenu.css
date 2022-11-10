@@ -1,0 +1,35 @@
+.user-menu-container{
+    width: 200px;
+    position: absolute;
+    top: 13.5%;
+    background-color: white;
+    border-radius: 9px;
+    padding: 12px 12px 24px 12px;
+}
+
+.join-user-container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: rgba(0, 0, 0, 0.768);
+    font-size: 14px;
+}
+
+.join-user-container::before{
+    content: "Join or Register";
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.join-user-container input{
+    outline: none;
+    background-color:  rgb(235, 235, 235);
+    border: 0;
+    border-radius: 7px;
+    padding: 5px;
+    font-family: montserrat;
+}
+
+.disable{
+    display: none;
+}
