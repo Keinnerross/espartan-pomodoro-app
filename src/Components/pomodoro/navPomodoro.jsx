@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { context } from "../context/store";
 import "../../stylesheets/pomodoro/navPomodoro.css";
 

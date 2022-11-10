@@ -17,29 +17,36 @@ const UserMenu = ({ onSubmit, toggle, loggedIn }) => {
 
   return (
     <div className={`user-menu-container ${toggle}`}>
-      <form
-        className={loggedIn ? "disable" : "join-user-container"}
-        onSubmit={sendUser}
-      >
-        <label>Name</label>
-        <input
-          type="text"
-          maxLength={12}
-          onChange={(e) => {
-            setUserName(e.target.value);
-          }}
-        />
-        <label>password</label>
-        <input
-          type="password"
-          minLength={6}
-          required
-          onChange={(e) => {
-            setUserPassword(e.target.value);
-          }}
-        />
-        <button type="submit">Join / Register</button>
-      </form>
+      {loggedIn ? (
+        <div className="user-settings">
+          <div className="">
+            <p>Signed in as</p>
+            <span>{userName}</span>
+          </div>
+          <span>Sign out</span>
+        </div>
+      ) : (
+        <form className="join-user-container" onSubmit={sendUser}>
+          <label>Name</label>
+          <input
+            type="text"
+            maxLength={12}
+            onChange={(e) => {
+              setUserName(e.target.value);
+            }}
+          />
+          <label>password</label>
+          <input
+            type="password"
+            minLength={6}
+            required
+            onChange={(e) => {
+              setUserPassword(e.target.value);
+            }}
+          />
+          <button type="submit">Join / Register</button>
+        </form>
+      )}
     </div>
   );
 };

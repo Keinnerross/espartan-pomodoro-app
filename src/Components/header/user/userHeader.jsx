@@ -9,6 +9,7 @@ const UserHeader = () => {
     userName: "User",
     password: 123,
   });
+  const [userPicture, setUserPicture] = useState(null);
 
   const userJoin = (userData) => {
     setUserLogin({
@@ -17,6 +18,16 @@ const UserHeader = () => {
     });
     setLoggedIn(true);
     setUserMenuOpen(!userMenuOpen);
+  };
+
+  const changePicture = (e) => {
+    const file = e.target.files[0];
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    console.log(reader);
+    reader.onloadend = () => {
+      setUserPicture(reader.result);
+    };
   };
 
   return (
@@ -30,7 +41,21 @@ const UserHeader = () => {
         <span>{userLogin.userName}</span>
         <span>Escudero</span>
       </div>
-      <picture className="profile-picture"></picture>
+
+      <picture className="profile-picture-container">
+        <label htmlFor="input-user-picture">
+          <div
+            className="profile-picture"
+            style={{ background: `url(${userPicture}) center center/cover` }}
+          ></div>
+        </label>
+        <input
+          id="input-user-picture"
+          type="file"
+          name="archivo"
+          onChange={changePicture}
+        />
+      </picture>
       <UserMenu
         onSubmit={userJoin}
         loggedIn={loggedIn}

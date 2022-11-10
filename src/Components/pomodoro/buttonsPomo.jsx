@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { context } from "../../Components/context/store";
-import { BsFillPlayFill, BsStopFill } from "react-icons/bs";
+import { BsFillPlayFill, BsStopFill, BsFillPauseFill } from "react-icons/bs";
 import { MdOutlineRestartAlt } from "react-icons/md";
 
 const ButtonsPomo = () => {
@@ -24,7 +24,6 @@ const ButtonsPomo = () => {
     }
 
     setIsActive(false);
-    console.log("Resetíao");
   };
 
   const stopButton = () => {
@@ -46,7 +45,11 @@ const ButtonsPomo = () => {
         className={isActive ? "button-pomo play active" : "button-pomo play"}
         onClick={() => setIsActive(!isActive)}
       >
-        <BsFillPlayFill size="30px" />
+        {isActive ? (
+          <BsFillPauseFill size="25px" />
+        ) : (
+          <BsFillPlayFill size="30px" />
+        )}
       </div>
       <div className="button-pomo aux" onClick={() => stopButton()}>
         <BsStopFill />
