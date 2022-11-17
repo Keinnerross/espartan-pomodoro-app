@@ -65,7 +65,6 @@ const TaskView = () => {
                       {...provided.draggableProps}
                       ref={provided.innerRef}
                       {...provided.dragHandleProps}
-                      
                     >
                       <Task title={task.title} />
                     </li>

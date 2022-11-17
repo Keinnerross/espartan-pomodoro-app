@@ -30,14 +30,13 @@ const PomoCounter = () => {
       clearInterval(timeId);
       console.log(`soy yo ${timeId}`);
       console.log(`soy yo el interval${runningPomo}`);
-
     }
     console.log("effect");
   }, [isActive]);
 
   /*TO DINAMIC TITLE */
   (() => {
-    document.title = `${showTime(time)}`;
+    document.title = `${showTime(time)} - Focus Warrior! `;
   })();
   /****************** */
   return (
@@ -48,7 +47,8 @@ const PomoCounter = () => {
       <div className="pomo-time-container">{showTime(time)}</div>
       <ButtonsPomo />
       <span className="cycle-view">
-        <CycleCounter />/4
+        <CycleCounter />
+        /4
       </span>
       <span>Focus Warrior</span>
       <div className="pomo-bar-container">

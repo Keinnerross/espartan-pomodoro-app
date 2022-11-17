@@ -1,0 +1,23 @@
+.habits-view-container {
+  margin: 2% 3% 0 3%;
+  min-height: 100%;
+}
+.title-container-habit {
+  font-size: 18px;
+  font-weight: 600;
+}
+.habits-view-container p {
+  font-size: 13px;
+  text-align: right;
+  cursor: pointer;
+  user-select: none;
+  color: var(--lightBlue);
+  transition: 0.3s;
+}
+
+.habits-view-container p:hover {
+  color: white;
+}
+
+.habit-list {
+}
