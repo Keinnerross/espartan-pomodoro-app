@@ -1,14 +1,14 @@
 import "../../stylesheets/habits/habits.css";
 
-const Habit = () => {
+const Habit = ({habitTitle, habitDescription, habitId}) => {
   return (
     <div className="habit-container">
       <div className="description-habit-container">
         <div className="img-habit"></div>
         <div className="text-habit-container">
-          <span className="title-habit">Bebér agua todos los días</span>
+          <span className="title-habit">{habitTitle}</span>
           <span className="description-habit">
-            El agua es importante para la salud
+            {habitDescription}
           </span>
         </div>
       </div>

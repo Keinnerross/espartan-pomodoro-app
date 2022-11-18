@@ -1,6 +1,6 @@
 .add-habit-container {
   background-color: rgba(5, 5, 25, 0.084);
-
+  font-family:poppins;
   padding: 15px;
   border-radius: 10px;
   cursor: pointer;
@@ -10,4 +10,28 @@
 
 .add-habit-container:hover {
   background-color: var(--secundary);
+}
+
+.add-habit-button::after{
+  content:"Add Habit";
+  user-select: none;
+}
+.add-habit-form {
+  display: flex;
+  flex-direction: column;
+}
+.add-habit-form input{
+  width: 100%;
+  background-color: var(--bodyBlue);
+  outline: none;
+  border: 0;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  font-size: 16px;
+
+}
+
+.disable {
+  display: none;
 }

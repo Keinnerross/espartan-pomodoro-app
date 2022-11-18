@@ -21,7 +21,6 @@ const TaskView = () => {
     return result;
   };
 
-  let arrastre = true;
 
   return (
     <div className="tasks-view-container">

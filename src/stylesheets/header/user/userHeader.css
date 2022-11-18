@@ -4,7 +4,7 @@
   justify-content: flex-end;
   padding: 5px 15px;
 }
-#input-user-picture{
+#input-user-picture {
   display: none;
 }
 
@@ -14,16 +14,16 @@
   background-color: antiquewhite;
   border-radius: 100%;
   cursor: pointer;
-  transition: .5s;
   background-size: cover;
-}
-.profile-picture:hover{
-  transform: scale(1.1);
 }
 
-.profile-picture-container{
+.profile-picture-container {
   background-image: url("../../../../assets/user-picture/user-picture.png");
   background-size: cover;
+  transition: 1.9s;
+}
+.profile-picture-container:hover {
+  transform: scale(1.1);
 }
 
 .title-user-container {
@@ -33,7 +33,6 @@
   text-align: right;
   padding-right: 10px;
   cursor: pointer;
-
 }
 
 .user-header-container:hover {
@@ -41,6 +40,6 @@
   border-radius: 7px;
 }
 
-.disable{
+.disable {
   display: none;
 }
