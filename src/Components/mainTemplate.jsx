@@ -5,7 +5,7 @@ import PomoCounter from "./pomodoro/pomocounter";
 import SettingPomodoro from "../Components/pomodoro/settingPomodoro";
 import TaskView from "./tasks/taskView";
 import HabitsView from "./habits/habitsView";
-
+import ViewLevel from "./levels/viewLevel";
 const MainTemplate = () => {
   return (
     <div className="all-container">
@@ -22,7 +22,9 @@ const MainTemplate = () => {
         <div className="body-app">
           <div className="title-greeting">Hello Warrior, Keinner Ross</div>
           <div className="content-body-app-container">
-            <div className="record-missions-container"></div>
+            <div className="record-missions-container">
+              <ViewLevel/>
+            </div>
             <div className="pomo-habits-container">
               <div className="pomo-container">
                 <PomoCounter />

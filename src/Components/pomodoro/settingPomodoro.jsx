@@ -6,7 +6,7 @@ const SettingPomodoro = () => {
   const { pomoSetting, setPomoSetting } = useContext(context);
   const { shortBreak, setShotBreak } = useContext(context);
   const { longBreak, setLongBreak } = useContext(context);
-  const {toggleSetting, setToggleSetting} = useContext(context);
+  const { toggleSetting, setToggleSetting } = useContext(context);
   const [inputValue, setInputValue] = useState({
     pomodoro: pomoSetting,
     short: shortBreak,
@@ -38,7 +38,6 @@ const SettingPomodoro = () => {
           <div className="value-pomos">
             <label>Pomodoro</label>
             <input
-              type="number"
               defaultValue={pomoSetting}
               onChange={(e) => {
                 setInputValue({ ...inputValue, pomodoro: e.target.value });

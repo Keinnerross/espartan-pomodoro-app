@@ -6,7 +6,7 @@ const AddTask = ({ onSubmit }) => {
   const inputAddTask = useRef(null);
 
   document.addEventListener("click", (e) => {
-    if (e.target.className.includes("add-task")) {
+    if(e.target.className.includes("add-task")) {
       setAddTaskForm(true);
     } else {
       setAddTaskForm(false);

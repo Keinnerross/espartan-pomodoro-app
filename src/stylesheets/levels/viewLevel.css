@@ -1,0 +1,10 @@
+.view-level-container{
+    padding: 25px;
+}
+.setting-level-button-container{
+    display: flex;
+    justify-content: flex-end;
+}
+.setting-level-button-container span{
+    cursor: pointer;
+}
