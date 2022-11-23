@@ -11,7 +11,20 @@ export const Provider = ({ children }) => {
   const [isActive, setIsActive] = useState(false);
   const [toggleSetting, setToggleSetting] = useState(false);
   const [cyclePomo, setCyclePomo] = useState(0);
-  const [modalWindow, setModalWindows] = useState(false);
+  const [completedTask, setCompletedTask] = useState(0);
+  const [allLevels, setAllLevels] = useState([
+    "Novice",
+    "Apprentice",
+    "Light Infantry",
+    "Hoplite Warrior",
+  ]);
+  const [currentLevel, setCurrentLevel] = useState(0);
+  const [levelPercentage, setLevelPercentage] = useState(0);
+  const [userPicture, setUserPicture] = useState(null);
+  const [userLogin, setUserLogin] = useState({
+    userName: "User",
+    password: 123,
+  });
   return (
     <context.Provider
       value={{
@@ -31,8 +44,18 @@ export const Provider = ({ children }) => {
         setToggleSetting,
         cyclePomo,
         setCyclePomo,
-        modalWindow,
-        setModalWindows,
+        completedTask,
+        setCompletedTask,
+        allLevels,
+        setAllLevels,
+        currentLevel,
+        setCurrentLevel,
+        levelPercentage,
+        setLevelPercentage,
+        userPicture,
+        setUserPicture,
+        userLogin,
+        setUserLogin,
       }}
     >
       {children}

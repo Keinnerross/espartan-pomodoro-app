@@ -44,7 +44,7 @@ header {
 }
 
 .record-missions-container {
-  width: 40%;
+  width: 50%;
   background-color: var(--secundary);
   border-radius: 20px;
 }

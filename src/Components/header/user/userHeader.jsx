@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import UserMenu from "./userMenu";
 import "../../../stylesheets/header/user/userHeader.css";
+import { context } from "../../context/store";
 
 const UserHeader = () => {
   const [userMenuOpen, setUserMenuOpen] = useState(false);
   const [loggedIn, setLoggedIn] = useState(false);
-  const [userLogin, setUserLogin] = useState({
-    userName: "User",
-    password: 123,
-  });
-  const [userPicture, setUserPicture] = useState(null);
+  const { userPicture } = useContext(context);
+  const {userLogin, setUserLogin} = useContext(context);
+  const { currentLevel } = useContext(context);
+  const { allLevels } = useContext(context);
 
   const userJoin = (userData) => {
     setUserLogin({
@@ -18,16 +18,6 @@ const UserHeader = () => {
     });
     setLoggedIn(true);
     setUserMenuOpen(!userMenuOpen);
-  };
-
-  const changePicture = (e) => {
-    const file = e.target.files[0];
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
-    console.log(reader);
-    reader.onloadend = () => {
-      setUserPicture(reader.result);
-    };
   };
 
   return (
@@ -39,7 +29,7 @@ const UserHeader = () => {
         }}
       >
         <span>{userLogin.userName}</span>
-        <span>Escudero</span>
+        <span>{allLevels[currentLevel]}</span>
       </div>
 
       <picture className="profile-picture-container">
@@ -49,12 +39,6 @@ const UserHeader = () => {
             style={{ background: `url(${userPicture}) center center/cover` }}
           ></div>
         </label>
-        <input
-          id="input-user-picture"
-          type="file"
-          name="archivo"
-          onChange={changePicture}
-        />
       </picture>
       <UserMenu
         onSubmit={userJoin}

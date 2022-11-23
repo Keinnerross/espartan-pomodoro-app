@@ -1,5 +1,27 @@
-.level-notice-container{
-    border: 1px solid white;
-    border-radius: 9px;
-    padding: 10px;
+.level-notice-container {
+  border-radius: 9px;
+  padding: 10px;
+  background-color: var(--lightBlue);
+  display: flex;
+}
+
+.info-level-container {
+  display: flex;
+}
+
+.next-level-img {
+  width: 50px;
+  background-color: var(--bodyBlue);
+  border-radius: 9px;
+  margin-right: 10px;
+}
+.level-info {
+  font-weight: 600;
+  font-size: 15px;
+}
+.completed-task-container{
+    font-size: 14px;
+}
+.level-percentage {
+  margin-left: 15px;
 }
