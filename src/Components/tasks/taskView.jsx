@@ -8,9 +8,11 @@ const TaskView = () => {
   const [tasksArr, setTasksArr] = useState([]);
 
   const addNewTask = (task) => {
-    const taskUpdate = [task, ...tasksArr];
-    setTasksArr(taskUpdate);
-    console.log(tasksArr);
+    if (task.title.trim()) {
+      task.title = task.title.trim();
+      const taskUpdate = [task, ...tasksArr];
+      setTasksArr(taskUpdate);
+    }
   };
 
   const reorder = (list, startIndex, endIndex) => {
@@ -20,7 +22,6 @@ const TaskView = () => {
 
     return result;
   };
-
 
   return (
     <div className="tasks-view-container">

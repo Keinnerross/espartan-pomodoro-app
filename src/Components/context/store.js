@@ -26,6 +26,11 @@ export const Provider = ({ children }) => {
     password: 123,
   });
 
+  {/*Helps Toggles*/}
+
+  const [infoPomodoro, setInfoPomodoro] = useState(false);
+
+
   return (
     <context.Provider
       value={{
@@ -57,6 +62,8 @@ export const Provider = ({ children }) => {
         setUserPicture,
         userLogin,
         setUserLogin,
+        infoPomodoro,
+        setInfoPomodoro
       }}
     >
       {children}

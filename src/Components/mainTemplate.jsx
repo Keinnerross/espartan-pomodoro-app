@@ -8,12 +8,14 @@ import SettingPomodoro from "../Components/pomodoro/settingPomodoro";
 import TaskView from "./tasks/taskView";
 import HabitsView from "./habits/habitsView";
 import ViewLevel from "./levels/viewLevel";
-
+import WhatIsPomodoro from "./Info/whatIsPomodoro";
 const MainTemplate = () => {
   const { userLogin } = useContext(context);
 
   return (
     <div className="all-container">
+      {/*Help Componets*/}
+      <WhatIsPomodoro />
       {/* Configure modal menus */}
       <SettingPomodoro />
       <div className="tasks-logo-container">
@@ -25,7 +27,9 @@ const MainTemplate = () => {
           <HeaderTemplate></HeaderTemplate>
         </header>
         <div className="body-app">
-          <div className="title-greeting">Hello Warrior, {userLogin.userName}</div>
+          <div className="title-greeting">
+            Hello Warrior, {userLogin.userName}
+          </div>
           <div className="content-body-app-container">
             <div className="record-missions-container">
               <ViewLevel />
