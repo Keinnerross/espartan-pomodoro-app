@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import song from "../../Audio/Pomodoro/Alarms/Skyrim_completed.mp3";
 import { context } from "../context/store";
 
@@ -14,10 +14,10 @@ const CycleCounter = () => {
 
   useEffect(() => {
     if (time == 0 && pomoSession == "Pomodoro" && cyclePomo < 3) {
-      sound.play();
       setTime(shortBreak * 60);
       setCyclePomo((cyclePomo) => cyclePomo + 1);
       setIsActive(false);
+      sound.play();
       setPomoSession("Short");
     } else if (time == 0 && pomoSession == "Short") {
       setTime(pomoSetting * 60);

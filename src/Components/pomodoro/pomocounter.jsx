@@ -8,7 +8,7 @@ import "../../stylesheets/pomodoro/pomoCounter.css";
 
 const PomoCounter = () => {
   const { time, setTime } = useContext(context);
-  const { isActive, setIsActive } = useContext(context);
+  const { isActive } = useContext(context);
 
   const showTime = (time) => {
     const min = parseInt(time / 60);
@@ -28,8 +28,6 @@ const PomoCounter = () => {
       setTimeId(runningPomo);
     } else {
       clearInterval(timeId);
-      console.log(`soy yo ${timeId}`);
-      console.log(`soy yo el interval${runningPomo}`);
     }
     console.log("effect");
   }, [isActive]);
