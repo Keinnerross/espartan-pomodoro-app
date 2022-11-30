@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Espartan-pomodoro-app/static/css/main.66aeb754.css",
-    "main.js": "/Espartan-pomodoro-app/static/js/main.2d8fcc11.js",
+    "main.css": "/Espartan-pomodoro-app/static/css/main.863ed2f4.css",
+    "main.js": "/Espartan-pomodoro-app/static/js/main.b9449dab.js",
     "static/media/Skyrim_completed.mp3": "/Espartan-pomodoro-app/static/media/Skyrim_completed.70037f1e4b19ddf67ac0.mp3",
     "index.html": "/Espartan-pomodoro-app/index.html",
-    "main.66aeb754.css.map": "/Espartan-pomodoro-app/static/css/main.66aeb754.css.map",
-    "main.2d8fcc11.js.map": "/Espartan-pomodoro-app/static/js/main.2d8fcc11.js.map"
+    "main.863ed2f4.css.map": "/Espartan-pomodoro-app/static/css/main.863ed2f4.css.map",
+    "main.b9449dab.js.map": "/Espartan-pomodoro-app/static/js/main.b9449dab.js.map"
   },
   "entrypoints": [
-    "static/css/main.66aeb754.css",
-    "static/js/main.2d8fcc11.js"
+    "static/css/main.863ed2f4.css",
+    "static/js/main.b9449dab.js"
   ]
 }
