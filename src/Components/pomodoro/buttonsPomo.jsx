@@ -3,6 +3,7 @@ import { context } from "../../Components/context/store";
 import { BsFillPlayFill, BsStopFill, BsFillPauseFill } from "react-icons/bs";
 import { MdOutlineRestartAlt } from "react-icons/md";
 
+
 const ButtonsPomo = () => {
   const { setTime } = useContext(context);
   const { pomoSetting } = useContext(context);
@@ -11,7 +12,13 @@ const ButtonsPomo = () => {
   const { pomoSession, setPomoSession } = useContext(context);
   const { isActive, setIsActive } = useContext(context);
   const { setCyclePomo } = useContext(context);
+  const { sound, setSound } = useContext(context);
 
+  const playAndLoadSound = () => {
+    setIsActive(!isActive);
+    sound.volume = 0;
+    sound.play()
+  };
   const restButton = () => {
     if (window.confirm("¿are you sure?") == true) {
       if (pomoSession == "Pomodoro") {
@@ -43,7 +50,7 @@ const ButtonsPomo = () => {
       </div>
       <div
         className={isActive ? "button-pomo play active" : "button-pomo play"}
-        onClick={() => setIsActive(!isActive)}
+        onClick={() => playAndLoadSound()}
       >
         {isActive ? (
           <BsFillPauseFill size="25px" />

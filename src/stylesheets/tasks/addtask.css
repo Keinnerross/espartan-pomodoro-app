@@ -1,6 +1,5 @@
 .add-task-container {
-  width: 70%;
-  padding: 12px;
+  width: 78%;
   color: white;
   background-color: var(--secundary);
   border-radius: 7px;
@@ -10,8 +9,18 @@
   margin: 10px 0;
   cursor: pointer;
 }
+.add-task-section {
+  padding: 12px;
+  border-radius: 7px;
+}
+
+.add-task-section:hover {
+  background-color: var(--lightBlue);
+}
 
 .active-add-task {
+  width: 70%;
+  padding: 12px;
   color: black;
   background-color: white;
 }
@@ -31,8 +40,6 @@
 .add-task-button::after {
   content: "Add new task";
 }
-
-
 
 .controls-add-task {
   margin-top: 20px;
@@ -55,10 +62,10 @@
 .controls-add-task button:hover {
 }
 
-.controls-add-task span{
-font-size: 25px;
-cursor: pointer;
-font-weight: 500;
-font-family: montserrat;
-color: gray;
+.controls-add-task span {
+  font-size: 25px;
+  cursor: pointer;
+  font-weight: 500;
+  font-family: montserrat;
+  color: gray;
 }

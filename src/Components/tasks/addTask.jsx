@@ -40,8 +40,12 @@ const AddTask = ({ onSubmit }) => {
       }
     >
       <div
-        className={addTaskForm ? "add-task-button disable" : "add-task-button"}
-      ></div>
+        className={
+          addTaskForm ? "add-task-section disable" : "add-task-section"
+        }
+      >
+        <div className="add-task-button"></div>
+      </div>
       <form
         className={addTaskForm ? "add-task-form" : "add-task-form disable"}
         onSubmit={sendTask}

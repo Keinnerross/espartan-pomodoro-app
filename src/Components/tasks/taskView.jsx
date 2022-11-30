@@ -66,7 +66,7 @@ const TaskView = () => {
                       ref={provided.innerRef}
                       {...provided.dragHandleProps}
                     >
-                      <Task title={task.title} />
+                      <Task title={task.title} idLabel={task.id} />
                     </li>
                   )}
                 </Draggable>

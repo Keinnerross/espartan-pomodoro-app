@@ -1,6 +1,6 @@
 .habit-container {
   display: flex;
-  background-color: var(--lightBlue);
+  background-color: var(--secundary);
   justify-content: space-between;
   padding-right: 10px;
   border-radius: 10px;
@@ -54,7 +54,7 @@
 .button-habit-plus {
   width: 30px;
   height: 30px;
-  background-color: var(--secundary);
+  background-color: var(--bodyBlue);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -69,5 +69,5 @@
 }
 
 .button-habit-plus:hover {
-  background-color: var(--bodyBlue);
+  background-color: var(--lightBlue);
 }

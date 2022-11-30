@@ -26,10 +26,15 @@ export const Provider = ({ children }) => {
     password: 123,
   });
 
-  {/*Helps Toggles*/}
+  {
+    /*Helps Toggles*/
+  }
 
   const [infoPomodoro, setInfoPomodoro] = useState(false);
 
+  /*Sounds */
+
+  const [sound, setSound] = useState(null);
 
   return (
     <context.Provider
@@ -63,7 +68,9 @@ export const Provider = ({ children }) => {
         userLogin,
         setUserLogin,
         infoPomodoro,
-        setInfoPomodoro
+        setInfoPomodoro,
+        sound,
+        setSound,
       }}
     >
       {children}

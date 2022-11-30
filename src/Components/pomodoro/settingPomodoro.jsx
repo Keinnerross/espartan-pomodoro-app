@@ -38,7 +38,6 @@ const SettingPomodoro = () => {
           <div className="value-pomos">
             <label>Pomodoro</label>
             <input
-              type="number"
               defaultValue={pomoSetting}
               onChange={(e) => {
                 setInputValue({ ...inputValue, pomodoro: e.target.value });

@@ -10,14 +10,16 @@ const CycleCounter = () => {
   const { setIsActive } = useContext(context);
   const { pomoSession, setPomoSession } = useContext(context);
   const { cyclePomo, setCyclePomo } = useContext(context);
+  const { sound, setSound } = useContext(context);
 
   useEffect(() => {
-    const sound = new Audio(song);
+    setSound(new Audio(song));
     if (time == 0 && pomoSession == "Pomodoro" && cyclePomo < 3) {
+      sound.volume = 1;
+      sound.play();
       setTime(shortBreak * 60);
       setCyclePomo((cyclePomo) => cyclePomo + 1);
       setIsActive(false);
-      sound.play();
       setPomoSession("Short");
     } else if (time == 0 && pomoSession == "Short") {
       setTime(pomoSetting * 60);

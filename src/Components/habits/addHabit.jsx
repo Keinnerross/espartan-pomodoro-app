@@ -35,9 +35,11 @@ const AddHabit = ({ onSubmit }) => {
     <div className="add-habit-container">
       <div
         className={
-          addHabitForm ? "add-habit-button disable" : "add-habit-button"
+          addHabitForm ? "add-habit-section disable" : "add-habit-section"
         }
-      ></div>
+      >
+        <div className="add-habit-button"></div>
+      </div>
       <form
         className={addHabitForm ? "add-habit-form" : "add-habit-form disable"}
         onSubmit={sendHabit}

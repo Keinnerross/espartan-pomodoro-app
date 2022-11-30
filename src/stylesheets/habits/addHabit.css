@@ -1,35 +1,40 @@
 .add-habit-container {
   background-color: rgba(5, 5, 25, 0.084);
-  font-family:poppins;
-  padding: 15px;
+  font-family: poppins;
   border-radius: 10px;
   cursor: pointer;
   user-select: none;
   margin: 1% 0 2% 0;
 }
 
-.add-habit-container:hover {
+.add-habit-section {
+  padding: 15px;
+  border-radius: 10px;
+  
+}
+
+.add-habit-section:hover {
   background-color: var(--secundary);
 }
 
-.add-habit-button::after{
-  content:"Add Habit";
+.add-habit-button::after {
+  content: "Add Habit";
   user-select: none;
 }
 .add-habit-form {
   display: flex;
   flex-direction: column;
+  padding: 15px;
+
 }
-.add-habit-form input{
-  width: 100%;
-  background-color: var(--bodyBlue);
+.add-habit-form input {
+  background-color: var(--secundary);
   outline: none;
   border: 0;
   border-radius: 10px;
   padding: 10px;
   color: white;
   font-size: 16px;
-
 }
 
 .disable {
