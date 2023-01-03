@@ -16,8 +16,6 @@ const PomoCounter = () => {
     return `${min < 10 ? "0" + min : min}:${sec < 10 ? "0" + sec : sec}`;
   };
 
-
-
   const [timeId, setTimeId] = useState(0);
 
   useEffect(() => {

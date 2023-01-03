@@ -1,6 +1,8 @@
-.logo-container{
-    height: 8%;
-    background-image: url("../../assets/brand/Logo1.png");
-    background-size: contain;
-    background-repeat: no-repeat;
+.logo-container {
+  height: 8%;
+  background-image: url("../../assets/brand/Logo1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
+
+

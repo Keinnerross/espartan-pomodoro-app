@@ -1,0 +1,92 @@
+.nav-mobile {
+  display: none;
+}
+
+.logo-container-mobile {
+  width: 100px;
+  background-image: url("../../assets/brand/Logo1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: none;
+}
+
+/* Escritorio pequeño / tablet */
+@media only screen and (min-width: 575px) and (max-width: 1200px) {
+}
+/* Teléfonos */
+@media only screen and (max-width: 575px) {
+  .nav-mobile {
+    display: flex;
+  }
+
+  .logo-container-mobile {
+    display: block;
+  }
+  .header-container {
+    display: none !important;
+  }
+  .title-greeting {
+    display: none;
+  }
+
+  .habits-container {
+    display: none;
+  }
+
+  .record-missions-container {
+    display: none;
+  }
+
+  .body-main-app-container {
+    width: 100vh;
+    max-width: 100%;
+  }
+
+  .pomo-habits-container {
+    width: 100vh;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .tasks-logo-container {
+    width: 100vw;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .logo-container {
+    display: none;
+  }
+
+  .task-container {
+    width: auto;
+  }
+
+  .controls-add-task {
+    padding: 5px;
+  }
+  .all-container {
+    margin-top: 100px;
+    height: auto;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .body-app {
+    height: auto;
+  }
+  .add-task-container {
+    width: 100vw;
+    max-width: 100%;
+  }
+
+  .active-add-task {
+    padding: 0;
+  }
+
+  #root {
+    padding: 15px;
+  }
+}

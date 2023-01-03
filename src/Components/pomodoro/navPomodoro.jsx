@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { context } from "../context/store";
 import "../../stylesheets/pomodoro/navPomodoro.css";
+import { MdSettings } from "react-icons/md";
 
 const NavPomodoro = () => {
   const { setTime } = useContext(context);
@@ -31,7 +32,7 @@ const NavPomodoro = () => {
         className="setting-pomo-button"
         onClick={() => setToggleSetting(true)}
       >
-        Q
+        <MdSettings/>
       </div>
     </div>
   );

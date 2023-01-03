@@ -1,12 +1,13 @@
 import BadgeLevel from "./BadgeLevel";
 import LevelNotice from "./levelNotice";
-import "../../stylesheets/levels/viewLevel.css"
+import "../../stylesheets/levels/viewLevel.css";
+import { MdSettings } from "react-icons/md";
 
 const ViewLevel = () => {
   return (
     <div className="view-level-container">
       <div className="setting-level-button-container">
-        <span>Q</span>
+        <MdSettings />
       </div>
       <BadgeLevel />
       <LevelNotice />

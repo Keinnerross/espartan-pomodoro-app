@@ -27,8 +27,10 @@ const MainTemplate = () => {
           <HeaderTemplate></HeaderTemplate>
         </header>
         <div className="body-app">
+          
           <div className="title-greeting">
             Hello Warrior, {userLogin.userName}
+            
           </div>
           <div className="content-body-app-container">
             <div className="record-missions-container">

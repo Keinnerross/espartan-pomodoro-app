@@ -1,5 +1,6 @@
 import "../../stylesheets/tasks/addtask.css";
 import React, { useState, useRef, useEffect } from "react";
+import { MdClose } from "react-icons/md";
 const AddTask = ({ onSubmit }) => {
   const [addTaskForm, setAddTaskForm] = useState(false);
   const [taskValue, setTaskValue] = useState("");
@@ -31,6 +32,10 @@ const AddTask = ({ onSubmit }) => {
     setTaskValue("");
   }
 
+  const closeCard = () => {
+    setAddTaskForm(false);
+  };
+
   return (
     <div
       className={
@@ -61,7 +66,9 @@ const AddTask = ({ onSubmit }) => {
         />
         <div className="controls-add-task">
           <button type="submit">Add Task</button>
-          <span>x</span>
+          <span onClick={() => closeCard()}>
+            <MdClose />
+          </span>
         </div>
       </form>
     </div>

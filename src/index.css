@@ -1,4 +1,4 @@
-:root{
+:root {
   --red: #db212b;
   --secundary: #142d42;
   --bodyBlue: #11263a;
@@ -9,13 +9,17 @@ body {
   font-family: poppins;
   color: white;
   background-color: var(--bodyBlue);
+  width: 100vw;
+  max-width: 100%;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-.disable{
+.disable {
   display: none;
 }
+
+
