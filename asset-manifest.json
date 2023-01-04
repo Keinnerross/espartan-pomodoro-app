@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Keinnerross/portfolioross/static/css/main.3df3c764.css",
-    "main.js": "/Keinnerross/portfolioross/static/js/main.2cfb9a68.js",
-    "static/media/Skyrim_completed.mp3": "/Keinnerross/portfolioross/static/media/Skyrim_completed.70037f1e4b19ddf67ac0.mp3",
-    "index.html": "/Keinnerross/portfolioross/index.html",
-    "main.3df3c764.css.map": "/Keinnerross/portfolioross/static/css/main.3df3c764.css.map",
-    "main.2cfb9a68.js.map": "/Keinnerross/portfolioross/static/js/main.2cfb9a68.js.map"
+    "main.css": "/Keinnerross/Espartan-pomodoro-app/static/css/main.3df3c764.css",
+    "main.js": "/Keinnerross/Espartan-pomodoro-app/static/js/main.796e5288.js",
+    "static/media/Skyrim_completed.mp3": "/Keinnerross/Espartan-pomodoro-app/static/media/Skyrim_completed.70037f1e4b19ddf67ac0.mp3",
+    "index.html": "/Keinnerross/Espartan-pomodoro-app/index.html",
+    "main.3df3c764.css.map": "/Keinnerross/Espartan-pomodoro-app/static/css/main.3df3c764.css.map",
+    "main.796e5288.js.map": "/Keinnerross/Espartan-pomodoro-app/static/js/main.796e5288.js.map"
   },
   "entrypoints": [
     "static/css/main.3df3c764.css",
-    "static/js/main.2cfb9a68.js"
+    "static/js/main.796e5288.js"
   ]
 }
