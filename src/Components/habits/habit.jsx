@@ -17,9 +17,13 @@ const Habit = ({ habitTitle, habitDescription }) => {
       <div className="controls-container">
         <span className="setting-habit">...</span>
         <div className="button-habit-plus">
-          <span onClick={()=>{
-            plusHabit();
-          }}>+</span>
+          <span
+            onClick={() => {
+              plusHabit();
+            }}
+          >
+            +
+          </span>
         </div>
         <div className="counter-habit-plus">{`++${habitCompleted}`}</div>
       </div>

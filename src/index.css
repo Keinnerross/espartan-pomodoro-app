@@ -6,7 +6,7 @@
 }
 body {
   margin: 0;
-  font-family: poppins;
+  font-family: sans-serif;
   color: white;
   background-color: var(--bodyBlue);
   width: 100vw;
@@ -21,5 +21,3 @@ code {
 .disable {
   display: none;
 }
-
-

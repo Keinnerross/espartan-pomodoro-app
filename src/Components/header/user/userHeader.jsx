@@ -7,7 +7,7 @@ const UserHeader = () => {
   const [userMenuOpen, setUserMenuOpen] = useState(false);
   const [loggedIn, setLoggedIn] = useState(false);
   const { userPicture } = useContext(context);
-  const {userLogin, setUserLogin} = useContext(context);
+  const { userLogin, setUserLogin } = useContext(context);
   const { currentLevel } = useContext(context);
   const { allLevels } = useContext(context);
 

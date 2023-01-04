@@ -2,7 +2,6 @@ import "../../stylesheets/habits/habitsView.css";
 import Habit from "./habit";
 import AddHabit from "./addHabit";
 import { useState } from "react";
-import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 
 const HabitsView = () => {
   const [habitArr, setHabitArr] = useState([]);

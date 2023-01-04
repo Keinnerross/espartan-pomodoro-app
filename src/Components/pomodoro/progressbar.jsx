@@ -20,7 +20,7 @@ const ProgressBar = () => {
     }
   }, [time]);
 
-  const barProgress = ((time / 60) / barValue) * 100;
+  const barProgress = (time / 60 / barValue) * 100;
 
   return (
     <>

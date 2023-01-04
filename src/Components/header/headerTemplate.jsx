@@ -5,7 +5,6 @@ import { BsFillMoonFill } from "react-icons/bs";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdSettings } from "react-icons/io";
 import { context } from "../context/store";
-import Logo from "../logo";
 
 const HeaderTemplate = () => {
   const { setInfoPomodoro } = useContext(context);

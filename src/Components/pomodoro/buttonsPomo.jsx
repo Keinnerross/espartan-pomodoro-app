@@ -3,7 +3,6 @@ import { context } from "../../Components/context/store";
 import { BsFillPlayFill, BsStopFill, BsFillPauseFill } from "react-icons/bs";
 import { MdOutlineRestartAlt } from "react-icons/md";
 
-
 const ButtonsPomo = () => {
   const { setTime } = useContext(context);
   const { pomoSetting } = useContext(context);
@@ -17,7 +16,7 @@ const ButtonsPomo = () => {
   const playAndLoadSound = () => {
     setIsActive(!isActive);
     sound.volume = 0;
-    sound.play()
+    sound.play();
   };
   const restButton = () => {
     if (window.confirm("¿are you sure?") == true) {

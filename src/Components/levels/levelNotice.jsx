@@ -1,13 +1,12 @@
 import React, { useContext, useEffect } from "react";
 import { context } from "../context/store";
 import "../../stylesheets/levels/levelNotice.css";
-import LevelLogic from "./LevelLogic";
+
 const LevelNotice = () => {
   const { currentLevel, setCurrentLevel } = useContext(context);
   const { allLevels } = useContext(context);
   const { levelPercentage, setLevelPercentage } = useContext(context);
   const { completedTask } = useContext(context);
-
 
   useEffect(() => {
     if (levelPercentage >= 100) {
@@ -16,7 +15,6 @@ const LevelNotice = () => {
     }
   }, [levelPercentage]);
 
-  
   return (
     <div className="level-notice-container">
       <div className="next-level-img"></div>

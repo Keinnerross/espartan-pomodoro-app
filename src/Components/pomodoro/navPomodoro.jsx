@@ -24,15 +24,30 @@ const NavPomodoro = () => {
   return (
     <div className="nav-pomodoro-container">
       <ul>
-        <li className={ (pomoSession == "Pomodoro") ? "activeNav" : ""} onClick={() => setPomoSession("Pomodoro")}>Pomo</li>
-        <li className={ (pomoSession == "Short") ? "activeNav" : ""} onClick={() => setPomoSession("Short")}>Short</li>
-        <li className={ (pomoSession == "Long") ? "activeNav" : ""} onClick={() => setPomoSession("Long")}>Long</li>
+        <li
+          className={pomoSession == "Pomodoro" ? "activeNav" : ""}
+          onClick={() => setPomoSession("Pomodoro")}
+        >
+          Pomo
+        </li>
+        <li
+          className={pomoSession == "Short" ? "activeNav" : ""}
+          onClick={() => setPomoSession("Short")}
+        >
+          Short
+        </li>
+        <li
+          className={pomoSession == "Long" ? "activeNav" : ""}
+          onClick={() => setPomoSession("Long")}
+        >
+          Long
+        </li>
       </ul>
       <div
         className="setting-pomo-button"
         onClick={() => setToggleSetting(true)}
       >
-        <MdSettings/>
+        <MdSettings />
       </div>
     </div>
   );
