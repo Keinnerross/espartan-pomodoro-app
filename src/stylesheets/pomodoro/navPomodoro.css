@@ -1,5 +1,4 @@
-
-.nav-pomodoro-container{
+.nav-pomodoro-container {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -7,33 +6,31 @@
 
 .nav-pomodoro-container ul {
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   list-style: none;
   grid-column-start: 2;
-  gap:30px;
+  gap: 30px;
   padding: 0;
 }
 
 .nav-pomodoro-container ul li {
   cursor: pointer;
   padding: 4px 10px;
-
 }
 
-.setting-pomo-button{
-grid-column-start: 3;
-display: flex;
-align-items: center;
-justify-content: flex-end;
-margin-right: 20px;
-cursor: pointer;
+.setting-pomo-button {
+  grid-column-start: 3;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 20px;
+  cursor: pointer;
 }
 
-.activeNav{
+.activeNav {
   border-radius: 7px;
   background-color: var(--bodyBlue);
   overflow: visible;
 }
-
