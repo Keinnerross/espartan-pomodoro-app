@@ -21,3 +21,7 @@ code {
 .disable {
   display: none;
 }
+
+.hidden {
+  display: none;
+}

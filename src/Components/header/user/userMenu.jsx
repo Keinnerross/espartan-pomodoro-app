@@ -55,9 +55,10 @@ const UserMenu = ({ onSubmit, toggle, loggedIn }) => {
           />
           <label>password</label>
           <input
-            type="password"
-            minLength={6}
-            required
+            type="text"
+            // type="current-password"
+            // minLength={6}
+            // required
             onChange={(e) => {
               setUserPassword(e.target.value);
             }}
