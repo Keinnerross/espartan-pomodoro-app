@@ -1,6 +1,5 @@
 import MainTemplate from "./Components/mainTemplate";
 import { Provider } from "./Components/context/store";
-import Logo from "./stylesheets/logo.css";
 import "./stylesheets/responsive.css";
 import "./App.css";
 

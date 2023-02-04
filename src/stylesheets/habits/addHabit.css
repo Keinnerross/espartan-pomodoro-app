@@ -1,5 +1,7 @@
 .add-habit-container {
-  background-color: rgba(5, 5, 25, 0.084);
+  /* background-color: rgba(5, 5, 25, 0.084); */
+  background-color: var(--secundary);
+
   border-radius: 10px;
   cursor: pointer;
   user-select: none;
@@ -25,7 +27,7 @@
   padding: 15px;
 }
 .add-habit-form input {
-  background-color: var(--secundary);
+  background-color: var(--bodyBlue);
   outline: none;
   border: 0;
   border-radius: 10px;

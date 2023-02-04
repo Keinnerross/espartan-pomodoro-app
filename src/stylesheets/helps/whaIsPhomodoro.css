@@ -1,15 +1,24 @@
-.pomodoro-info-container{
-    width: 100vw;
-    max-width: 100%;
-    height: 100vh;
-    position: absolute;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content:  center;
-    backdrop-filter: blur(12px);
+.pomodoro-info-container {
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  position: absolute;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
-.pomdoro-info-section{
-    width: 60%;
+.pomdoro-info-section {
+  width: 540px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: var(--colorText2);
+  border-radius: 8px;
+  padding: 40px 20px;
+  text-align: justify;
 }

@@ -3,19 +3,30 @@
   --secundary: #142d42;
   --bodyBlue: #11263a;
   --lightBlue: #1f465b;
+  --colorText: white;
+  --colorText2: black;
 }
 body {
   margin: 0;
-  font-family: sans-serif;
-  color: white;
+  font-family: "Poppins", sans-serif;
+  color: var(--colorText);
   background-color: var(--bodyBlue);
   width: 100vw;
   max-width: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+input {
+  outline: none;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+label {
+  margin: 0;
+  padding: 0;
+}
+button {
+  border: none;
 }
 
 .disable {
