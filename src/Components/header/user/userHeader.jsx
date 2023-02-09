@@ -17,16 +17,14 @@ const UserHeader = () => {
       password: userData.userPassword,
     });
     setLoggedIn(true);
-    setUserMenuOpen(!userMenuOpen);
+    setUserMenuOpen(false);
   };
 
   return (
     <div className="user-header-container">
       <div
         className="title-user-container"
-        onClick={() => {
-          setUserMenuOpen(!userMenuOpen);
-        }}
+        onMouseEnter={() => setUserMenuOpen(true)}
       >
         <span>{userLogin.userName}</span>
         <span>{allLevels[currentLevel]}</span>
@@ -40,11 +38,16 @@ const UserHeader = () => {
           ></div>
         </label>
       </picture>
-      <UserMenu
-        onSubmit={userJoin}
-        loggedIn={loggedIn}
-        toggle={userMenuOpen ? "" : "disable"}
-      ></UserMenu>
+      <div
+        className="user-menu-section"
+        onMouseLeave={() => setUserMenuOpen(false)}
+      >
+        <UserMenu
+          onSubmit={userJoin}
+          loggedIn={loggedIn}
+          toggle={userMenuOpen ? "" : "disable"}
+        ></UserMenu>
+      </div>
     </div>
   );
 };

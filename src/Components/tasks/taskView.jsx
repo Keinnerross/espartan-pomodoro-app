@@ -6,11 +6,30 @@ import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 
 const TaskView = () => {
   const [tasksArr, setTasksArr] = useState([]);
+  const [inputTitleValue, setInputTitleValue] = useState("");
+  const [taskId, setTaskId] = useState();
 
   const addNewTask = (task) => {
     if (task.title.trim()) {
       task.title = task.title.trim();
       const taskUpdate = [task, ...tasksArr];
+      setTasksArr(taskUpdate);
+    }
+  };
+
+  const editTitle = (value, id) => {
+    tasksArr.forEach((task) => {
+      if (task.id == id) {
+        task.title = value;
+      }
+    });
+    setTaskId(id);
+    setInputTitleValue(value);
+  };
+
+  const delateTask = (id) => {
+    if (window.confirm("Do yo want delate this task?") == true) {
+      const taskUpdate = tasksArr.filter((task) => task.id !== id);
       setTasksArr(taskUpdate);
     }
   };
@@ -26,7 +45,7 @@ const TaskView = () => {
   return (
     <div className="tasks-view-container">
       <span>
-        <h3>Tasks</h3>
+        <h3 onClick={() => console.log(tasksArr)}>Tasks</h3>
       </span>
       <AddTask onSubmit={addNewTask} />
       <DragDropContext
@@ -66,7 +85,12 @@ const TaskView = () => {
                       ref={provided.innerRef}
                       {...provided.dragHandleProps}
                     >
-                      <Task title={task.title} idLabel={task.id} />
+                      <Task
+                        title={task.title}
+                        idLabel={task.id}
+                        inputChange={editTitle}
+                        delTask={delateTask}
+                      />
                     </li>
                   )}
                 </Draggable>

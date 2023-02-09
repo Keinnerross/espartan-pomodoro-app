@@ -1,6 +1,14 @@
-.badge-level-container{
-    height: 150px;
-    background-color: violet;
-    margin: 15px 0;
-    border-radius: 15px;
+.badge-level-container {
+  height: 190px;
+  background: url("../../../assets/ads/spartan-cover.jpg") no-repeat;
+  background-size: 140%;
+  background-position: center;
+  margin: 15px 0;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.badge-level-container:hover{
+    transform: scale(1.04);
 }

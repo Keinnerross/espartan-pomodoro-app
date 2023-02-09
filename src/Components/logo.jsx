@@ -1,3 +1,5 @@
+import "../stylesheets/logo.css";
+
 const Logo = () => {
   return (
     <div className="logo-container">

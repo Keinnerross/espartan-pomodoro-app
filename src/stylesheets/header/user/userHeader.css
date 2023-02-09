@@ -39,3 +39,7 @@
   border-radius: 7px;
 }
 
+.user-menu-section {
+  position: absolute;
+  top: 13.5%;
+}

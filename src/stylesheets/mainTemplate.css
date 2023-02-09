@@ -5,15 +5,16 @@
   max-height: 100%;
   background: var(--bodyBlue);
   display: flex;
+  justify-content: center;
 }
 
 .tasks-logo-container {
-  width: 22%;
-  padding: 2% 0 0 4%;
+  width: 21%;
+  padding: 2% 0 0 0;
 }
 
 .body-main-app-container {
-  width: 75%;
+  width: 73%;
 }
 
 /** Content into body-main-app-container*/
@@ -45,6 +46,8 @@ header {
 
 .record-missions-container {
   width: 50%;
+  max-height: 97%;
+
   background-color: var(--secundary);
   border-radius: 20px;
 }

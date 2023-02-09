@@ -1,6 +1,8 @@
 import "../../stylesheets/tasks/addtask.css";
 import React, { useState, useRef, useEffect } from "react";
+import { v4 as uuidv4 } from "uuid";
 import { MdClose } from "react-icons/md";
+
 const AddTask = ({ onSubmit }) => {
   const [addTaskForm, setAddTaskForm] = useState(false);
   const [taskValue, setTaskValue] = useState("");
@@ -25,7 +27,7 @@ const AddTask = ({ onSubmit }) => {
 
     const newTask = {
       title: taskValue,
-      id: parseInt(Math.random() * (50 - 1) + 1).toString(),
+      id: uuidv4(),
     };
     onSubmit(newTask);
     e.target.reset();
