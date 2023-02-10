@@ -1,7 +1,7 @@
 import "../../stylesheets/tasks/taskview.css";
 import AddTask from "./addTask";
 import Task from "./task.jsx";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 
 const TaskView = () => {
@@ -33,6 +33,17 @@ const TaskView = () => {
       setTasksArr(taskUpdate);
     }
   };
+
+  useEffect(() => {
+    const storedData = localStorage.getItem("tasksArr");
+    if (storedData) {
+      setTasksArr(JSON.parse(storedData));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("tasksArr", JSON.stringify(tasksArr));
+  }, [tasksArr, inputTitleValue]);
 
   const reorder = (list, startIndex, endIndex) => {
     const result = [...list];

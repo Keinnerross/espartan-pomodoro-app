@@ -20,13 +20,25 @@ input {
   border: 0;
   margin: 0;
   padding: 0;
+  font-family: "Poppins", sans-serif;
 }
 label {
   margin: 0;
   padding: 0;
 }
 button {
+  font-family: "Poppins", sans-serif;
   border: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+li {
+  list-style: none;
+  padding: 0;
 }
 
 .disable {

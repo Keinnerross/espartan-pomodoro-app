@@ -93,8 +93,11 @@
   z-index: 1000;
 }
 
+.edit-task-input {
+  max-width: 100%;
+}
 
-.del-task-btn{
+.edit-del-btn {
   cursor: pointer;
   border-radius: 9px;
   padding: 4px;

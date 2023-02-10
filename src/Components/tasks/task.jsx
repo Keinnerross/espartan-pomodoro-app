@@ -24,12 +24,12 @@ const Task = ({ title, idLabel, inputChange, delTask }) => {
   return (
     <div className="margin-container">
       {/* "margin-container" Exist for fix a bug caused by dnd utility*/}
-
       <div className="task-container" onMouseLeave={() => setEditActive(false)}>
         <div className={editActive ? "edit-task-container" : "hidden"}>
           <div className="edit-task-section">
-            <label htmlFor="">Editar Tare</label>
+            <label htmlFor="">Edit Task</label>
             <input
+            className="edit-task-input"
               type="text"
               onChange={(e) => inputChange(e.target.value, idLabel)}
               defaultValue={title}
@@ -45,7 +45,7 @@ const Task = ({ title, idLabel, inputChange, delTask }) => {
               <option value="">Naranja</option>
               <option value="">Amarillo</option>
             </select> */}
-            <button className="del-task-btn" onClick={() => delTask(idLabel)}>
+            <button className="edit-del-btn" onClick={() => delTask(idLabel)}>
               Eliminar Tarea
             </button>
           </div>

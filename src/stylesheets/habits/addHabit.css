@@ -1,11 +1,10 @@
 .add-habit-container {
   /* background-color: rgba(5, 5, 25, 0.084); */
   background-color: var(--secundary);
-
   border-radius: 10px;
   cursor: pointer;
   user-select: none;
-  margin: 1% 0 2% 0;
+  margin: 1% 0 1.4% 0;
 }
 
 .add-habit-section {

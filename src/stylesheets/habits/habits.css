@@ -1,10 +1,17 @@
+.margin-habits-container{
+  padding: 8px 0;
+}
+
 .habit-container {
+  position: relative;
+}
+
+.habit-section {
   display: flex;
   background-color: var(--secundary);
   justify-content: space-between;
   padding-right: 10px;
   border-radius: 10px;
-  margin-bottom: 3%;
 }
 
 .description-habit-container {
@@ -49,6 +56,11 @@
   font-weight: 800;
   user-select: none;
   cursor: pointer;
+  padding: 4px;
+}
+
+.setting-habit:hover {
+  background-color: var(--bodyBlue);
 }
 
 .button-habit-plus {
@@ -72,3 +84,26 @@
   background-color: var(--lightBlue);
 }
 
+/*Edit Container*/
+
+
+.habit-edit-container {
+  position: absolute;
+  top: 40px;
+  right: 15px;
+  color: var(--colorText2);
+  z-index: 1000;
+}
+
+.edit-habit-card {
+  background-color: white;
+  padding: 10px;
+  border-radius: 7px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-habit-card input {
+  background-color: lavender;
+}
