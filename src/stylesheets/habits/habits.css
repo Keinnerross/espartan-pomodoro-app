@@ -105,3 +105,20 @@
 .edit-habit-card input {
   background-color: lavender;
 }
+
+.habit-input-section {
+  display: flex;
+  height: 100px;
+
+  flex-direction: column;
+  gap: 10px;
+}
+
+.edit-habit-input {
+  width: 100px;
+  max-width: 80%;
+  padding: 5px 10px;
+  border: solid 2px #eaeaea;
+  border-radius: 7px;
+  font-size: 14px;
+}

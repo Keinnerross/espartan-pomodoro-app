@@ -18,6 +18,15 @@ const UserHeader = () => {
     setUserLogin(userData.userName);
   };
 
+  const signOut = () => {
+    const confirm = window.confirm("Are you sure to sign out?");
+    if (loggedIn && confirm) {
+      setLoggedIn(false);
+      setUserMenuOpen(false);
+      setUserLogin("User");
+    }
+  };
+
   useEffect(() => {
     const userLoginData = localStorage.getItem("userLogin");
     const storedDataL = localStorage.getItem("loggedIn");
@@ -58,6 +67,7 @@ const UserHeader = () => {
           onSubmit={userJoin}
           loggedIn={loggedIn}
           toggle={userMenuOpen ? "" : "disable"}
+          signOut={signOut}
         ></UserMenu>
       </div>
     </div>

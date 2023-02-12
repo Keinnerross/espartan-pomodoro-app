@@ -13,41 +13,39 @@ const MainTemplate = () => {
 
   return (
     <>
-    <div className="all-container">
-      {/*Help Componets*/}
-      <WhatIsPomodoro />
-      {/* Configure modal menus */}
-      <div className="tasks-logo-container">
-        <Logo />
-        <TaskView />
-      </div>
-      <div className="body-main-app-container">
-        <header>
-          <HeaderTemplate></HeaderTemplate>
-        </header>
-        <div className="body-app">
-          <div className="title-greeting">
-            Hello Warrior, {userLogin}
-          </div>
-          <div className="content-body-app-container">
-            <div className="record-missions-container">
-              <ViewLevel />
-            </div>
-            <div className="pomo-habits-container">
-              <div className="pomo-container">
-                <PomoCounter />
+      <div className="all-container">
+        {/*Help Componets*/}
+        <WhatIsPomodoro />
+        {/* Configure modal menus */}
+        <div className="tasks-logo-container">
+          <Logo />
+          <TaskView />
+        </div>
+        <div className="body-main-app-container">
+          <header>
+            <HeaderTemplate></HeaderTemplate>
+          </header>
+          <div className="body-app">
+            <div className="title-greeting">Hello Warrior, {userLogin}</div>
+            <div className="content-body-app-container">
+              <div className="record-missions-container">
+                <ViewLevel />
               </div>
-              <div className="habits-container">
-                <HabitsView />
+              <div className="pomo-habits-container">
+                <div className="pomo-container">
+                  <PomoCounter />
+                </div>
+                <div className="habits-container">
+                  <HabitsView />
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div className="info-pomodoro-container">
-      
-    </div>
+      {/* <div className="info-pomodoro-container">
+
+    </div> */}
     </>
   );
 };

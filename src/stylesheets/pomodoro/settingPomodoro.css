@@ -9,7 +9,8 @@
   align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
   color: var(--colorText2);
-  position: absolute;
+  position: fixed;
+  z-index: 999999;
 }
 
 .setting-container {
@@ -47,7 +48,7 @@
   flex-direction: column;
 }
 
-.value-pomos input {
+.value-pomos input, select {
   border-radius: 7px;
   background-color: lightgray;
   padding: 10px 8px;

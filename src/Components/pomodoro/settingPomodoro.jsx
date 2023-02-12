@@ -67,13 +67,15 @@ const SettingPomodoro = ({ changeSound }) => {
               }}
             />
           </div>
-
-          <select onChange={(e) => changeSound(e.target.value)}>
-            <option value="1">Epic 1</option>
-            <option value="2">Epic 2</option>
-            <option value="3">Epic 3</option>
-            <option value="0">Clasic Alarm</option>
-          </select>
+          <div className="value-pomos">
+            <label>Sound Setting</label>
+            <select onChange={(e) => changeSound(e.target.value)}>
+              <option value="1">Epic 1</option>
+              <option value="2">Epic 2</option>
+              <option value="3">Epic 3</option>
+              <option value="0">Clasic Alarm</option>
+            </select>
+          </div>
           <button type="submit">DONE</button>
         </form>
       </div>

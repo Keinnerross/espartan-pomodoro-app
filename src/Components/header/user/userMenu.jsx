@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { context } from "../../context/store";
 import "../../../stylesheets/header/user/userMenu.css";
 
-const UserMenu = ({ onSubmit, toggle, loggedIn }) => {
+const UserMenu = ({ onSubmit, toggle, loggedIn, signOut }) => {
   const [userName, setUserName] = useState("");
   const [userPassword, setUserPassword] = useState("Escudero");
   const { setUserPicture } = useContext(context);
@@ -41,7 +41,7 @@ const UserMenu = ({ onSubmit, toggle, loggedIn }) => {
               onChange={changePicture}
             />
           </label>
-          <span>Sign out</span>
+          <span onClick={() => signOut()}>Sign out</span>
         </div>
       ) : (
         <form className="join-user-container" onSubmit={sendUser}>
@@ -53,7 +53,9 @@ const UserMenu = ({ onSubmit, toggle, loggedIn }) => {
             }}
           />
 
-          <button className="button-join" type="submit">Done</button>
+          <button className="button-join" type="submit">
+            Done
+          </button>
         </form>
       )}
     </div>
