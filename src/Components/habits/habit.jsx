@@ -1,5 +1,5 @@
 import "../../stylesheets/habits/habits.css";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 const Habit = ({
   habitTitle,
   habitDescription,
@@ -9,7 +9,6 @@ const Habit = ({
 }) => {
   const [habitCompleted, setHabitCompleted] = useState(0);
   const [editActive, setEditActive] = useState(false);
-
   const plusHabit = () => {
     setHabitCompleted(habitCompleted + 1);
   };
@@ -22,30 +21,12 @@ const Habit = ({
         >
           <div className={editActive ? "edit-habit-card" : "hidden"}>
             <div className="edit-habit-section">
-              <label htmlFor="">Edit Task</label>
-              <input
-                className="edit-habit-input"
-                type="text"
-                onChange={(e) => inputChange(e.target.value, idHabit)}
-                defaultValue={habitTitle}
-              />
-              {/* <label htmlFor="">Activar Lista</label>
-        <input type="checkbox" name="" id="" />
-        <label htmlFor="">Agregar Etiqueta</label>
-        <select>
-          <option value="">Rojo</option>
-          <option value="">Verde</option>
-          <option value="">Azul</option>
-          <option value="">Rosa</option>
-          <option value="">Naranja</option>
-          <option value="">Amarillo</option>
-        </select> */}
-              <button
-                className="edit-del-btn"
-                onClick={() => delHabit(idHabit)}
-              >
-                Delete Habit
-              </button>
+              <ul>
+                <li>Edit Title</li>
+                <li>Edit Description</li>
+                <li>Create a Duplicate</li>
+                <li onClick={() => delHabit(idHabit)}>Delete Habit</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -58,10 +39,7 @@ const Habit = ({
             </div>
           </div>
           <div className="controls-container">
-            <span
-              className="setting-habit"
-              onMouseEnter={() => setEditActive(true)}
-            >
+            <span className="setting-habit" onClick={() => setEditActive(true)}>
               ...
             </span>
             <div className="button-habit-plus">

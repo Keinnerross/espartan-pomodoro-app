@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { context } from "../context/store";
 import "../../stylesheets/pomodoro/settingPomodoro.css";
 
-const SettingPomodoro = () => {
+const SettingPomodoro = ({ changeSound }) => {
   const { pomoSetting, setPomoSetting } = useContext(context);
   const { shortBreak, setShotBreak } = useContext(context);
   const { longBreak, setLongBreak } = useContext(context);
@@ -67,6 +67,13 @@ const SettingPomodoro = () => {
               }}
             />
           </div>
+
+          <select onChange={(e) => changeSound(e.target.value)}>
+            <option value="1">Epic 1</option>
+            <option value="2">Epic 2</option>
+            <option value="3">Epic 3</option>
+            <option value="0">Clasic Alarm</option>
+          </select>
           <button type="submit">DONE</button>
         </form>
       </div>

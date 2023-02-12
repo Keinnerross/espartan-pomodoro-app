@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useRef, useEffect } from "react";
 import { context } from "../context/store";
 import "../../stylesheets/tasks/task.css";
 import { BsThreeDotsVertical } from "react-icons/bs";
@@ -8,6 +8,8 @@ const Task = ({ title, idLabel, inputChange, delTask }) => {
   const { levelPercentage, setLevelPercentage } = useContext(context);
   const [checkTask, setCheckTask] = useState(false);
   const [editActive, setEditActive] = useState(false);
+  const [editInput, setEditInput] = useState(false);
+  const inputTitle = useRef(null);
 
   const handleTaskCompleted = () => {
     if (checkTask) {
@@ -21,33 +23,74 @@ const Task = ({ title, idLabel, inputChange, delTask }) => {
     }
   };
 
+  useEffect(() => {
+    if (inputTitle) {
+      inputTitle.current.focus();
+    }
+  }, [editInput]);
+
   return (
     <div className="margin-container">
       {/* "margin-container" Exist for fix a bug caused by dnd utility*/}
-      <div className="task-container" onMouseLeave={() => setEditActive(false)}>
+      <div
+        className="task-container"
+        onMouseLeave={() => {
+          setEditActive(false);
+          setEditInput(false);
+        }}
+      >
         <div className={editActive ? "edit-task-container" : "hidden"}>
           <div className="edit-task-section">
-            <label htmlFor="">Edit Task</label>
-            <input
-            className="edit-task-input"
-              type="text"
-              onChange={(e) => inputChange(e.target.value, idLabel)}
-              defaultValue={title}
-            />
-            {/* <label htmlFor="">Activar Lista</label>
-            <input type="checkbox" name="" id="" />
-            <label htmlFor="">Agregar Etiqueta</label>
-            <select>
-              <option value="">Rojo</option>
-              <option value="">Verde</option>
-              <option value="">Azul</option>
-              <option value="">Rosa</option>
-              <option value="">Naranja</option>
-              <option value="">Amarillo</option>
-            </select> */}
-            <button className="edit-del-btn" onClick={() => delTask(idLabel)}>
-              Eliminar Tarea
-            </button>
+            <div className="edit-task-header">
+              <h4>Manage task</h4>
+              <hr />
+            </div>
+            <ul className={editInput ? "hidden" : "setting-task-list"}>
+              <li onClick={() => setEditInput(true)}>Edit Title</li>
+              <li>
+                <label htmlFor=""> Convert to List</label>
+                <input className="hidden" type="checkbox" name="" id="" />
+              </li>
+              <li>
+                {" "}
+                <label htmlFor="">Add Bookmark</label>
+                <select className="hidden">
+                  <option value="">Rojo</option>
+                  <option value="">Verde</option>
+                  <option value="">Azul</option>
+                  <option value="">Rosa</option>
+                  <option value="">Naranja</option>
+                  <option value="">Amarillo</option>
+                </select>
+              </li>
+              <li>Create a Duplicate</li>
+              <li onClick={() => delTask(idLabel)}>Delete Task</li>
+            </ul>
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                setEditActive(false);
+              }}
+              className={editInput ? "task-input-section" : "hidden"}
+            >
+              <input
+                className="edit-task-input"
+                type="text"
+                ref={inputTitle}
+                onChange={(e) => inputChange(e.target.value, idLabel)}
+                defaultValue={title}
+              />
+              <button
+                type="submit"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setEditActive(false);
+                }}
+                className="done-button"
+              >
+                Done
+              </button>
+            </form>
           </div>
         </div>
 
@@ -62,7 +105,7 @@ const Task = ({ title, idLabel, inputChange, delTask }) => {
             <label htmlFor={idLabel}></label>
             <div
               className="setting-task-card"
-              onMouseEnter={() => setEditActive(true)}
+              onClick={() => setEditActive(true)}
             >
               <BsThreeDotsVertical />
             </div>

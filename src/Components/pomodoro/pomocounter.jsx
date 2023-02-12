@@ -5,10 +5,12 @@ import CycleCounter from "./cycleCounter";
 import ProgressBar from "./progressbar";
 import ButtonsPomo from "./buttonsPomo";
 import "../../stylesheets/pomodoro/pomoCounter.css";
+import SettingPomodoro from "./settingPomodoro";
 
 const PomoCounter = () => {
   const { time, setTime } = useContext(context);
   const { isActive } = useContext(context);
+  const [soundSelect, setSoundSelect] = useState(1);
 
   const showTime = (time) => {
     const min = parseInt(time / 60);
@@ -37,22 +39,30 @@ const PomoCounter = () => {
     document.title = `${showTime(time)} - Focus Warrior! `;
   })();
   /****************** */
+
+  const changeSound = (value) => {
+    setSoundSelect(value);
+  };
+
   return (
-    <div className="pomodoro-container">
-      <div className="pomoNav">
-        <NavPomodoro></NavPomodoro>
+    <>
+      <SettingPomodoro changeSound={changeSound} />
+      <div className="pomodoro-container">
+        <div className="pomoNav">
+          <NavPomodoro></NavPomodoro>
+        </div>
+        <div className="pomo-time-container">{showTime(time)}</div>
+        <ButtonsPomo />
+        <span className="cycle-view">
+          <CycleCounter soundSelect={soundSelect} />
+          /4
+        </span>
+        <span>Focus Warrior</span>
+        <div className="pomo-bar-container">
+          <ProgressBar />
+        </div>
       </div>
-      <div className="pomo-time-container">{showTime(time)}</div>
-      <ButtonsPomo />
-      <span className="cycle-view">
-        <CycleCounter />
-        /4
-      </span>
-      <span>Focus Warrior</span>
-      <div className="pomo-bar-container">
-        <ProgressBar />
-      </div>
-    </div>
+    </>
   );
 };
 

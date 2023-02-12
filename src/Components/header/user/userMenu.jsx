@@ -45,7 +45,6 @@ const UserMenu = ({ onSubmit, toggle, loggedIn }) => {
         </div>
       ) : (
         <form className="join-user-container" onSubmit={sendUser}>
-          <label>Name</label>
           <input
             type="text"
             maxLength={12}
@@ -53,17 +52,8 @@ const UserMenu = ({ onSubmit, toggle, loggedIn }) => {
               setUserName(e.target.value);
             }}
           />
-          <label>password</label>
-          <input
-            type="text"
-            // type="current-password"
-            // minLength={6}
-            // required
-            onChange={(e) => {
-              setUserPassword(e.target.value);
-            }}
-          />
-          <button type="submit">Join / Register</button>
+
+          <button className="button-join" type="submit">Done</button>
         </form>
       )}
     </div>

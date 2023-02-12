@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import UserMenu from "./userMenu";
 import "../../../stylesheets/header/user/userHeader.css";
 import { context } from "../../context/store";
@@ -10,15 +10,27 @@ const UserHeader = () => {
   const { userLogin, setUserLogin } = useContext(context);
   const { currentLevel } = useContext(context);
   const { allLevels } = useContext(context);
+  const { data, setData } = useContext(context);
 
   const userJoin = (userData) => {
-    setUserLogin({
-      userName: userData.userName,
-      password: userData.userPassword,
-    });
     setLoggedIn(true);
     setUserMenuOpen(false);
+    setUserLogin(userData.userName);
   };
+
+  useEffect(() => {
+    const userLoginData = localStorage.getItem("userLogin");
+    const storedDataL = localStorage.getItem("loggedIn");
+    if (data) {
+      setUserLogin(JSON.parse(userLoginData));
+      setLoggedIn(JSON.parse(storedDataL));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("userLogin", JSON.stringify(userLogin));
+    localStorage.setItem("loggedIn", JSON.stringify(loggedIn));
+  }, [data, loggedIn]);
 
   return (
     <div className="user-header-container">
@@ -26,7 +38,7 @@ const UserHeader = () => {
         className="title-user-container"
         onMouseEnter={() => setUserMenuOpen(true)}
       >
-        <span>{userLogin.userName}</span>
+        <span>{userLogin}</span>
         <span>{allLevels[currentLevel]}</span>
       </div>
 

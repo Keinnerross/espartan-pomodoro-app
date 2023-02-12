@@ -14,7 +14,7 @@
 }
 
 .join-user-container::before {
-  content: "Join or Register";
+  content: "What should we call you?";
   font-size: 20px;
   font-weight: 500;
 }
@@ -49,4 +49,11 @@
 }
 .user-settings span:hover {
   color: var(--lightBlue);
+}
+
+.button-join {
+  width: 120px;
+  background-color: var(--red);
+  color: white;
+  border-radius: 7px;
 }

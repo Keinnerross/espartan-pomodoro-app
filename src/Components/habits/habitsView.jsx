@@ -1,16 +1,19 @@
 import "../../stylesheets/habits/habitsView.css";
 import Habit from "./habit";
 import AddHabit from "./addHabit";
-import { useState } from "react";
+import { useState, useEffect, useContext } from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
+import { context } from "../context/store";
 
 const HabitsView = () => {
   const [habitArr, setHabitArr] = useState([]);
   const [inputHabitValue, setInputHabitValue] = useState("");
+  const { data, setData } = useContext(context);
 
   const addNewHabit = (habit) => {
     const habitUpdate = [habit, ...habitArr];
     setHabitArr(habitUpdate);
+    data[0].habits = habitUpdate;
   };
 
   const editTitleHabit = (value, id) => {
@@ -28,6 +31,17 @@ const HabitsView = () => {
       setHabitArr(updateHabit);
     }
   };
+
+  useEffect(() => {
+    const storedData = localStorage.getItem("habitArr");
+    if (storedData) {
+      setHabitArr(JSON.parse(storedData));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("habitArr", JSON.stringify(habitArr));
+  }, [habitArr, inputHabitValue]);
 
   const reorder = (list, startIndex, endIndex) => {
     const result = [...list];
@@ -63,10 +77,7 @@ const HabitsView = () => {
 
         <Droppable droppableId="habitArr">
           {(provided) => (
-            <ul
-              {...provided.droppableProps}
-              ref={provided.innerRef}
-            >
+            <ul {...provided.droppableProps} ref={provided.innerRef}>
               {habitArr.map((habit, i) => (
                 <Draggable
                   key={habit.id}

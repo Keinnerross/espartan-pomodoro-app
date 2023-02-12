@@ -1,19 +1,22 @@
 import "../../stylesheets/tasks/taskview.css";
 import AddTask from "./addTask";
 import Task from "./task.jsx";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
+import { context } from "../context/store";
 
 const TaskView = () => {
   const [tasksArr, setTasksArr] = useState([]);
   const [inputTitleValue, setInputTitleValue] = useState("");
-  const [taskId, setTaskId] = useState();
+  const { data, setData } = useContext(context);
 
   const addNewTask = (task) => {
     if (task.title.trim()) {
       task.title = task.title.trim();
       const taskUpdate = [task, ...tasksArr];
       setTasksArr(taskUpdate);
+      data[0].tasks = taskUpdate;
+      console.log(data[0].tasks);
     }
   };
 
@@ -23,7 +26,7 @@ const TaskView = () => {
         task.title = value;
       }
     });
-    setTaskId(id);
+    
     setInputTitleValue(value);
   };
 

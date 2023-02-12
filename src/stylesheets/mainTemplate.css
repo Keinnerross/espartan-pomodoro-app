@@ -88,3 +88,8 @@ header {
 .habits-container::-webkit-scrollbar-track {
   border-radius: 10px;
 }
+
+.info-pomodoro-container {
+  background-color: aliceblue;
+  height: 100vh;
+}

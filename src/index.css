@@ -5,6 +5,7 @@
   --lightBlue: #1f465b;
   --colorText: white;
   --colorText2: black;
+  --lightGra1 : "#eaeaea"
 }
 body {
   margin: 0;
@@ -39,8 +40,13 @@ ul {
 li {
   list-style: none;
   padding: 0;
-}
+  cursor: pointer;
 
+}
+label{
+  cursor: pointer;
+
+}
 .disable {
   display: none;
 }
@@ -48,3 +54,10 @@ li {
 .hidden {
   display: none;
 }
+
+h4 {
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+}
+

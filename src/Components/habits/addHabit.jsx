@@ -1,6 +1,6 @@
 import "../../stylesheets/habits/addHabit.css";
 
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 const AddHabit = ({ onSubmit }) => {
   const [addHabitForm, setAddHabitForm] = useState(false);
@@ -9,6 +9,7 @@ const AddHabit = ({ onSubmit }) => {
     description: "",
     id: "",
   });
+  const titleHabit = useRef(null);
 
   document.addEventListener("click", (e) => {
     if (e.target.className.includes("add-habit")) {
@@ -31,6 +32,12 @@ const AddHabit = ({ onSubmit }) => {
     e.target.reset();
   };
 
+  useEffect(() => {
+    if (titleHabit) {
+      titleHabit.current.focus();
+    }
+  }, [addHabitForm]);
+
   return (
     <div className="add-habit-container">
       <div
@@ -46,6 +53,7 @@ const AddHabit = ({ onSubmit }) => {
       >
         <label>Title</label>
         <input
+          ref={titleHabit}
           className="add-habit-title"
           onChange={(e) => {
             habitValue.title = e.target.value;

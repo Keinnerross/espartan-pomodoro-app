@@ -81,24 +81,52 @@
 /*Edit Task Section*/
 
 .edit-task-container {
-  width: 50%;
+  width: 150px;
   top: 40px;
   right: -40%;
   position: absolute;
   color: var(--colorText2);
-  padding: 12px 12px;
   background: white;
   box-shadow: 1px 1px 14px 0px rgba(0, 0, 0, 0.044);
-  border-radius: 3px;
+  border-radius: 7px;
   z-index: 1000;
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.edit-task-header {
+  text-align: center;
+  padding: 0 10px;
+}
+
+.setting-task-list li {
+  padding: 3% 10%;
+}
+
+.setting-task-list li:hover {
+  background-color: #eaeaea;
+}
+
+.task-input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .edit-task-input {
-  max-width: 100%;
+  width: 100px;
+  max-width: 80%;
+  padding: 5px 10px;
+  border: solid 2px #eaeaea;
+  border-radius: 7px;
+  font-size: 14px;
 }
 
-.edit-del-btn {
-  cursor: pointer;
-  border-radius: 9px;
-  padding: 4px;
+.done-button {
+  width: 120px;
+  background-color: var(--red);
+  color: white;
+  border-radius: 7px;
 }

@@ -21,10 +21,7 @@ export const Provider = ({ children }) => {
   const [currentLevel, setCurrentLevel] = useState(0);
   const [levelPercentage, setLevelPercentage] = useState(0);
   const [userPicture, setUserPicture] = useState(null);
-  const [userLogin, setUserLogin] = useState({
-    userName: "User",
-    password: 123,
-  });
+  const [userLogin, setUserLogin] = useState("user");
 
   {
     /*Helps Toggles*/
@@ -32,9 +29,10 @@ export const Provider = ({ children }) => {
 
   const [infoPomodoro, setInfoPomodoro] = useState(false);
 
-  /*Sounds */
-
-  const [sound, setSound] = useState(null);
+  /*Local Data */
+  const [data, setData] = useState([
+    { userName: "User", password: 123, picture: null, tasks: [], habits: [] },
+  ]);
 
   return (
     <context.Provider
@@ -69,8 +67,8 @@ export const Provider = ({ children }) => {
         setUserLogin,
         infoPomodoro,
         setInfoPomodoro,
-        sound,
-        setSound,
+        data,
+        setData,
       }}
     >
       {children}

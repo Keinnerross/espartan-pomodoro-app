@@ -1,4 +1,4 @@
-.margin-habits-container{
+.margin-habits-container {
   padding: 8px 0;
 }
 
@@ -86,13 +86,11 @@
 
 /*Edit Container*/
 
-
 .habit-edit-container {
   position: absolute;
-  top: 40px;
-  right: 15px;
+  bottom: 85px;
+  right: 10px;
   color: var(--colorText2);
-  z-index: 1000;
 }
 
 .edit-habit-card {
