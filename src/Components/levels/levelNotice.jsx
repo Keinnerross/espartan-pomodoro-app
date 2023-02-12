@@ -21,14 +21,10 @@ const LevelNotice = () => {
 
       <div className="level-notice-section">
         <div className="info-level-container">
-          <div className="level-info">
-            Próximo Nivel {allLevels[currentLevel + 1]}
-          </div>
-          <div className="level-percentage">{levelPercentage}%</div>
+          <div className="level-info">¡Llegó la Beta! 🥳</div>
+          <div className="level-percentage"></div>
         </div>
-        <div className="completed-task-container">
-          {completedTask} completed task
-        </div>
+        <div className="completed-task-container">¡Concentrate y avanza!</div>
       </div>
     </div>
   );

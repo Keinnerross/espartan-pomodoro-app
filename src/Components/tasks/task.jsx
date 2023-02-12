@@ -3,25 +3,17 @@ import { context } from "../context/store";
 import "../../stylesheets/tasks/task.css";
 import { BsThreeDotsVertical } from "react-icons/bs";
 
-const Task = ({ title, idLabel, inputChange, delTask }) => {
-  const { completedTask, setCompletedTask } = useContext(context);
-  const { levelPercentage, setLevelPercentage } = useContext(context);
-  const [checkTask, setCheckTask] = useState(false);
+const Task = ({
+  title,
+  idLabel,
+  completed,
+  inputChange,
+  checkTask,
+  delTask,
+}) => {
   const [editActive, setEditActive] = useState(false);
   const [editInput, setEditInput] = useState(false);
   const inputTitle = useRef(null);
-
-  const handleTaskCompleted = () => {
-    if (checkTask) {
-      setCheckTask(false);
-      setCompletedTask(completedTask - 1);
-      setLevelPercentage(levelPercentage - 20);
-    } else {
-      setCheckTask(true);
-      setCompletedTask(completedTask + 1);
-      setLevelPercentage(levelPercentage + 20);
-    }
-  };
 
   useEffect(() => {
     if (inputTitle) {
@@ -98,9 +90,10 @@ const Task = ({ title, idLabel, inputChange, delTask }) => {
           <div className="title-task">{title}</div>
           <div className="check-task-container">
             <input
+              checked={completed}
               type="checkbox"
               id={idLabel}
-              onChange={handleTaskCompleted}
+              onClick={() => checkTask(idLabel)}
             />
             <label htmlFor={idLabel}></label>
             <div

@@ -58,7 +58,8 @@ header {
 }
 
 .habits-container {
-  max-height: 40%;
+  min-height: 43%;
+  max-height: 43%;
   margin-top: 20px;
   border: 1.5px solid var(--lightBlue);
   border-radius: 15px;

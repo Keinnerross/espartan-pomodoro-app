@@ -1,6 +1,6 @@
 .task-container {
   width: 70%;
-  padding: 12px 8px;
+  padding: 12px;
   color: black;
   background-color: white;
   border-radius: 7px;
@@ -43,6 +43,7 @@
   justify-content: center;
   cursor: pointer;
   gap: 3px;
+  position: relative;
 }
 
 .check-task-container input[type="checkbox"] + label::before {
@@ -65,11 +66,12 @@
   width: 6px;
   height: 3px;
   border: 3px solid var(--lightBlue);
-  float: left;
-  margin-left: -0.8em;
+  position: absolute;
+  left: 4.5px;
+  top: 5.9px;
+
   border-right: 0;
   border-top: 0;
-  margin-top: 0.3em;
   transform: rotate(-55deg);
   cursor: pointer;
 }
@@ -81,7 +83,7 @@
 /*Edit Task Section*/
 
 .edit-task-container {
-  width: 150px;
+  width: fit-content;
   top: 40px;
   right: -40%;
   position: absolute;
@@ -98,7 +100,6 @@
 }
 .edit-task-header {
   text-align: center;
-  padding: 0 10px;
 }
 
 .setting-task-list li {
@@ -125,7 +126,6 @@
 }
 
 .done-button {
-  width: 120px;
   background-color: var(--red);
   color: white;
   border-radius: 7px;

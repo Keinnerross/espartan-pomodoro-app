@@ -8,6 +8,7 @@ import { context } from "../context/store";
 const TaskView = () => {
   const [tasksArr, setTasksArr] = useState([]);
   const [inputTitleValue, setInputTitleValue] = useState("");
+  const [updateCheck, setUpdateCheck] = useState(false);
   const { data, setData } = useContext(context);
 
   const addNewTask = (task) => {
@@ -26,8 +27,16 @@ const TaskView = () => {
         task.title = value;
       }
     });
-    
     setInputTitleValue(value);
+  };
+
+  const checkTask = (id) => {
+    tasksArr.forEach((task) => {
+      if (task.id == id) {
+        task.completed = !task.completed;
+      }
+    });
+    setUpdateCheck(!updateCheck);
   };
 
   const delateTask = (id) => {
@@ -46,7 +55,7 @@ const TaskView = () => {
 
   useEffect(() => {
     localStorage.setItem("tasksArr", JSON.stringify(tasksArr));
-  }, [tasksArr, inputTitleValue]);
+  }, [tasksArr, inputTitleValue, updateCheck]);
 
   const reorder = (list, startIndex, endIndex) => {
     const result = [...list];
@@ -100,9 +109,11 @@ const TaskView = () => {
                       {...provided.dragHandleProps}
                     >
                       <Task
-                        title={task.title}
                         idLabel={task.id}
+                        title={task.title}
+                        completed={task.completed}
                         inputChange={editTitle}
+                        checkTask={checkTask}
                         delTask={delateTask}
                       />
                     </li>

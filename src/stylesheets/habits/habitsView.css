@@ -1,6 +1,7 @@
 .habits-view-container {
   margin: 2% 3% 0 3%;
   min-height: 100%;
+  
 }
 .title-container-habit {
   font-size: 18px;
@@ -18,4 +19,3 @@
 .habits-view-container p:hover {
   color: white;
 }
-

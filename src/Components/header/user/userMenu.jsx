@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useRef, useEffect } from "react";
 import { context } from "../../context/store";
 import "../../../stylesheets/header/user/userMenu.css";
 
@@ -6,6 +6,7 @@ const UserMenu = ({ onSubmit, toggle, loggedIn, signOut }) => {
   const [userName, setUserName] = useState("");
   const [userPassword, setUserPassword] = useState("Escudero");
   const { setUserPicture } = useContext(context);
+  const inputName = useRef(null);
 
   const changePicture = (e) => {
     const file = e.target.files[0];
@@ -25,6 +26,12 @@ const UserMenu = ({ onSubmit, toggle, loggedIn, signOut }) => {
     };
     onSubmit(dataUser);
   };
+
+  useEffect(() => {
+    if (inputName && !loggedIn) {
+      inputName.current.focus();
+    }
+  }, [toggle]);
 
   return (
     <div className={`user-menu-container ${toggle}`}>
@@ -48,6 +55,7 @@ const UserMenu = ({ onSubmit, toggle, loggedIn, signOut }) => {
           <input
             type="text"
             maxLength={12}
+            ref={inputName}
             onChange={(e) => {
               setUserName(e.target.value);
             }}

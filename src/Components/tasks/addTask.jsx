@@ -28,6 +28,7 @@ const AddTask = ({ onSubmit }) => {
     const newTask = {
       title: taskValue,
       id: uuidv4(),
+      completed: false,
     };
     onSubmit(newTask);
     e.target.reset();
