@@ -1,4 +1,5 @@
 import "../../stylesheets/habits/addHabit.css";
+import { v4 as uuidv4 } from "uuid";
 
 import React, { useState, useRef, useEffect } from "react";
 
@@ -21,14 +22,15 @@ const AddHabit = ({ onSubmit }) => {
 
   const sendHabit = (e) => {
     e.preventDefault();
-    habitValue.id = parseInt(Math.random() * (50 - 1) + 1).toString();
+    habitValue.id = uuidv4();
+
     const newHabit = {
       id: habitValue.id,
       title: habitValue.title,
       description: habitValue.description,
     };
     onSubmit(newHabit);
-
+    habitValue.description = "";
     e.target.reset();
   };
 
@@ -64,7 +66,6 @@ const AddHabit = ({ onSubmit }) => {
           className="add-habit-description"
           onChange={(e) => {
             habitValue.description = e.target.value;
-            console.log(habitValue);
           }}
         ></input>
         <button className="disable" type="submit">

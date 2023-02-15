@@ -21,7 +21,7 @@ export const Provider = ({ children }) => {
   const [currentLevel, setCurrentLevel] = useState(0);
   const [levelPercentage, setLevelPercentage] = useState(0);
   const [userPicture, setUserPicture] = useState(null);
-  const [userLogin, setUserLogin] = useState("user");
+  const [userLogin, setUserLogin] = useState("");
 
   {
     /*Helps Toggles*/

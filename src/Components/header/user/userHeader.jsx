@@ -47,7 +47,7 @@ const UserHeader = () => {
         className="title-user-container"
         onClick={() => setUserMenuOpen(true)}
       >
-        <span>{userLogin}</span>
+        <span>{userLogin ? userLogin : "User"}</span>
         <span>{allLevels[currentLevel]}</span>
       </div>
 

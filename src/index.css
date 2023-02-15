@@ -1,3 +1,5 @@
+/* 
+Originals
 :root {
   --red: #db212b;
   --secundary: #142d42;
@@ -6,7 +8,18 @@
   --colorText: white;
   --colorText2: black;
   --lightGra1: "#eaeaea";
+} */
+
+:root {
+  --red: #db212b;
+  --bodyBlue: #0b2034;
+  --secundary: #0a2841;
+  --lightBlue: #0e415a;
+  --colorText: rgb(246, 246, 246);
+  --colorText2: rgb(17, 17, 18);
+  --lightGra1: "#eaeaea";
 }
+
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;

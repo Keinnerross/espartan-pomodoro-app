@@ -54,24 +54,27 @@ const AddTask = ({ onSubmit }) => {
       >
         <div className="add-task-button"></div>
       </div>
+
       <form
         className={addTaskForm ? "add-task-form" : "add-task-form disable"}
         onSubmit={sendTask}
       >
-        <input
-          type="text"
-          className="input-add-task"
-          ref={inputAddTask}
-          placeholder="Agg a title for you task"
-          onChange={(e) => {
-            setTaskValue(e.target.value);
-          }}
-        />
-        <div className="controls-add-task">
-          <button type="submit">Add Task</button>
-          <span onClick={() => closeCard()}>
-            <MdClose />
-          </span>
+        <div className="add-task-form-section">
+          <input
+            type="text"
+            className="input-add-task"
+            ref={inputAddTask}
+            placeholder="Agg a title for you task"
+            onChange={(e) => {
+              setTaskValue(e.target.value);
+            }}
+          />
+          <div className="controls-add-task">
+            <button type="submit">Add Task</button>
+            <span onClick={() => closeCard()}>
+              <MdClose />
+            </span>
+          </div>
         </div>
       </form>
     </div>

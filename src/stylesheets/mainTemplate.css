@@ -8,19 +8,26 @@
   justify-content: center;
 }
 
+.all-section {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+}
+
 .tasks-logo-container {
-  width: 21%;
+  width: 100%;
   padding: 2% 0 0 0;
 }
 
 .body-main-app-container {
-  width: 73%;
+  width: 78%;
 }
 
 /** Content into body-main-app-container*/
 
 header {
   width: 100%;
+  max-width: 100%;
   height: 12%;
 }
 
@@ -54,7 +61,7 @@ header {
 
 .pomo-habits-container {
   width: 100%;
-  padding: 0 3%;
+  padding: 0 0 0 3%;
 }
 
 .habits-container {

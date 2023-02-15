@@ -10,10 +10,11 @@
 .add-habit-section {
   padding: 15px;
   border-radius: 10px;
+  transition: .3s;
 }
 
 .add-habit-section:hover {
-  background-color: var(--secundary);
+  background-color: var(--lightBlue);
 }
 
 .add-habit-button::after {

@@ -1,16 +1,17 @@
 .task-container {
-  width: 70%;
-  padding: 12px;
+  width: 100%;
+  padding: 12px 0;
   color: black;
   background-color: white;
   border-radius: 7px;
   display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
 }
 
 .task-section {
-  width: 100%;
+  width: 90%;
   padding-left: 2px;
   color: black;
   border-radius: 7px;
@@ -111,6 +112,8 @@
 }
 
 .task-input-section {
+  width: fit-content;
+  padding: 15px;
   display: flex;
   flex-direction: column;
   gap: 10px;

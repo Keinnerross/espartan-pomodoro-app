@@ -1,5 +1,5 @@
 .add-task-container {
-  width: 78%;
+  width: 100%;
   color: white;
   background-color: var(--secundary);
   border-radius: 7px;
@@ -12,6 +12,7 @@
 .add-task-section {
   padding: 12px;
   border-radius: 7px;
+  transition: 0.3s;
 }
 
 .add-task-section:hover {
@@ -19,10 +20,20 @@
 }
 
 .active-add-task {
-  width: 70%;
-  padding: 12px;
+  width: 100%;
+  padding: 12px 0;
   color: black;
   background-color: white;
+}
+
+.add-task-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-task-form-section {
+  width: 90%;
 }
 
 .input-add-task {
@@ -30,7 +41,7 @@
   border: 0;
   border-radius: 12px;
   width: 80%;
-  padding: 12px 6px 64px 6px;
+  padding: 12px 6px 4px 6px;
   font-size: 16px;
   font-weight: 300;
   color: lightslategray;
@@ -57,8 +68,6 @@
   border-radius: 9px;
   cursor: pointer;
 }
-
-
 
 .controls-add-task span {
   font-size: 25px;
