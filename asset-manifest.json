@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Espartan-pomodoro-app/static/css/main.61395d85.css",
-    "main.js": "/Espartan-pomodoro-app/static/js/main.b43d0fa8.js",
+    "main.css": "/Espartan-pomodoro-app/static/css/main.6d739187.css",
+    "main.js": "/Espartan-pomodoro-app/static/js/main.1b4a4d70.js",
     "static/media/Epic_2.wav": "/Espartan-pomodoro-app/static/media/Epic_2.2282f062edda2f776571.wav",
     "static/media/Epic_short.wav": "/Espartan-pomodoro-app/static/media/Epic_short.8c9d5546586fad35abde.wav",
     "static/media/Clasic_alarm.wav": "/Espartan-pomodoro-app/static/media/Clasic_alarm.de6d74acf2973d2c1791.wav",
     "static/media/spartan-cover.jpg": "/Espartan-pomodoro-app/static/media/spartan-cover.8b45f8b052dbed82e9c6.jpg",
     "static/media/Epic_1.mp3": "/Espartan-pomodoro-app/static/media/Epic_1.b26248928ec955cf032b.mp3",
     "index.html": "/Espartan-pomodoro-app/index.html",
-    "main.61395d85.css.map": "/Espartan-pomodoro-app/static/css/main.61395d85.css.map",
-    "main.b43d0fa8.js.map": "/Espartan-pomodoro-app/static/js/main.b43d0fa8.js.map"
+    "main.6d739187.css.map": "/Espartan-pomodoro-app/static/css/main.6d739187.css.map",
+    "main.1b4a4d70.js.map": "/Espartan-pomodoro-app/static/js/main.1b4a4d70.js.map"
   },
   "entrypoints": [
-    "static/css/main.61395d85.css",
-    "static/js/main.b43d0fa8.js"
+    "static/css/main.6d739187.css",
+    "static/js/main.1b4a4d70.js"
   ]
 }
